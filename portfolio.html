@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Portfolio | Wood Art Interiors</title>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" /> -->
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+
+  <!-- DaisyUI (local) -->
+  <link href="assets/css/daisyui.css" rel="stylesheet" type="text/css" />
+
+  <!-- Tailwind (local) -->
+  <script src="assets/js/tailwind.js"></script>
+
+  <!-- Font Awesome 6.5.1 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+
+  <!-- Custom Tailwind CSS Configuration -->
+  <style type="text/tailwindcss">
+    @theme  {
+      --color-CustomOrange: #EF8228;
+      --color-CustomBlack: #1B1B1B;
+      --color-CustomWhite: #ffffff;
+      --font-robot: 'Roboto', sans-serif;
+      --font-cinzel: 'Cinzel', sans-serif;
+      --font-slab: 'Roboto Slab', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-base-200 font-robot">
+  <!-- Top Navbar -->
+  <nav class="bg-CustomBlack text-CustomWhite py-3">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-5">
+      <!-- Left Side -->
+      <div class="flex flex-col md:flex-row items-center space-x-3">
+        <div class="flex items-center space-x-3">
+          <div class="flex items-center border-r border-dotted border-CustomOrange pr-3">
+            <i class="fa-solid fa-phone text-CustomOrange me-5"></i><span>01700000000</span>
+          </div>
+          <div class="flex items-center border-r border-dotted border-CustomOrange pr-3">
+            <i class="fa-regular fa-envelope text-CustomOrange me-5"></i><span>info@gmail.com</span>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <i class="fa-regular fa-clock text-CustomOrange me-5"></i><span>Sat - Thu : 9:00 - 6:00</span>
+        </div>
+      </div>
+      <!-- Right Side -->
+      <div class="flex items-center space-x-5">
+        <a href="javascript:void(0)" target="_blank" class="text-md"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="javascript:void(0)" target="_blank" class="text-md"><i class="fa-brands fa-facebook"></i></a>
+        <a href="javascript:void(0)" target="_blank" class="text-md"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="javascript:void(0)" target="_blank" class="text-md"><i class="fa-brands fa-pinterest"></i></a>
+        <a href="javascript:void(0)" target="_blank" class="text-md"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </nav>
+  <!-- Header -->
+  <div class="bg-base-100 shadow-sm">
+    <div class="flex items-center container mx-auto py-2 px-5">
+      <!-- Logo -->
+      <div class="flex-1">
+        <a href="index.html"><img src="assets/img/logo.png" alt="Logo" class="h-12" /></a>
+      </div>
+      <!-- Nav Items -->
+      <div class="hidden lg:flex flex-1">
+        <ul class="flex items-center space-x-10 px-1">
+          <li class="font-bold text-sm hover:text-CustomOrange">
+            <a href="index.html">HOME</a>
+          </li>
+          <li class="font-bold text-sm hover:text-CustomOrange">
+            <a href="about.html">ABOUT US</a>
+          </li>
+          <li class="relative group text-sm">
+            <a href="services.html" class="font-bold text-sm hover:text-CustomOrange flex">SERVICES <i
+                class="fa-solid fa-sort-down ms-2"></i></a>
+            <!-- First level dropdown -->
+            <ul class="absolute left-0 top-full hidden group-hover:block bg-CustomWhite p-4 space-y-3 shadow-lg z-10">
+              <li class="border-b border-dashed hover:text-CustomOrange whitespace-nowrap"><a
+                  href="service_details.html">RESIDENTIAL</a></li>
+
+              <li class="relative border-b border-dashed group/sub">
+                <div class="flex items-center space-x-2 hover:text-CustomOrange whitespace-nowrap"><a
+                    href="service_details.html">COMMERCIAL INTERIOR</a><i class="fa-solid fa-caret-right"></i>
+                </div>
+                <!-- Submenu (second level) -->
+                <ul
+                  class="absolute left-full top-0 hidden group-hover/sub:block bg-CustomWhite p-4 space-y-3 shadow-lg z-20">
+                  <li class="border-b border-dashed hover:text-CustomOrange whitespace-nowrap"><a
+                      href="service_details.html">BEDROOM
+                      DESIGN</a></li>
+                  <li class="border-b border-dashed hover:text-CustomOrange whitespace-nowrap"><a
+                      href="service_details.html">BATHROOM
+                      DESIGN</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </li>
+          <li class="font-bold text-sm text-CustomOrange hover:text-CustomOrange">
+            <a href="portfolio.html">PORTFOLIO</a>
+          </li>
+          <li class="font-bold text-sm hover:text-CustomOrange">
+            <a href="contact.html">CONTACT US</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Drawer -->
+      <div class="block lg:hidden">
+        <div class="drawer">
+          <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+          <div class="drawer-content">
+            <!-- Page content here -->
+            <label for="my-drawer" class="text-CustomOrange text-2xl bg-transparent btn drawer-button border-none"><i
+                class="fa-solid fa-bars-staggered"></i></label>
+          </div>
+          <div class="drawer-side">
+            <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+            <div class="bg-CustomWhite text-base-content min-h-full w-80 p-4">
+              <!-- Logo -->
+              <div class="mb-5 border-b border-dashed border-CustomOrange">
+                <a href="index.html"><img src="assets/img/logo.png" alt="Logo" class="h-12" /></a>
+              </div>
+              <ul class="space-y-5">
+                <li class="font-bold text-sm hover:text-CustomOrange">
+                  <a href="index.html">HOME</a>
+                </li>
+                <li class="font-bold text-sm hover:text-CustomOrange">
+                  <a href="about.html">ABOUT US</a>
+                </li>
+                <li class="relative group text-sm">
+                  <a href="services.html" class="font-bold text-sm hover:text-CustomOrange">SERVICES
+                    <i class="fa-solid fa-sort-down"></i></a>
+                  <!-- First level dropdown -->
+                  <ul class="hidden group-hover:block bg-CustomWhite p-4 space-y-3 shadow-lg">
+                    <li class="border-b border-dashed hover:text-CustomOrange whitespace-nowrap"><a
+                        href="service_details.html">RESIDENTIAL</a></li>
+
+                    <li class="relative border-b border-dashed group/sub">
+                      <div class="flex items-center space-x-2 hover:text-CustomOrange whitespace-nowrap">
+                        <a href="service_details.html">COMMERCIAL INTERIOR</a><i class="fa-solid fa-caret-right"></i>
+                      </div>
+                      <!-- Submenu (second level) -->
+                      <ul class="hidden group-hover/sub:block bg-CustomWhite p-4 space-y-3 shadow-lg">
+                        <li class="border-b border-dashed hover:text-CustomOrange whitespace-nowrap">
+                          <a href="service_details.html">BEDROOM DESIGN</a>
+                        </li>
+                        <li class="border-b border-dashed hover:text-CustomOrange whitespace-nowrap">
+                          <a href="service_details.html">BATHROOM DESIGN</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                  </ul>
+                </li>
+                <li class="font-bold text-sm text-CustomOrange hover:text-CustomOrange">
+                  <a href="portfolio.html">PORTFOLIO</a>
+                </li>
+                <li class="font-bold text-sm hover:text-CustomOrange">
+                  <a href="contact.html">CONTACT US</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="bg-[url('assets/img/1.webp')] w-full aspect-[3/1] flex items-center justify-center">
+    <div class="w-full md:w-3/4 text-CustomWhite px-5">
+      <h1 class="font-cinzel font-bold text-md md:text-4xl">PORTFOLIO</h1>
+    </div>
+  </section>
+
+  <!-- Portfolio Projects Section -->
+  <section class="container mx-auto p-5">
+    <div class="w-full">
+
+      <!-- name of each tab group should be unique -->
+      <div class="tabs tabs-lift">
+        <input type="radio" name="my_tabs_3" class="tab" aria-label="All" checked="checked" />
+        <div class="tab-content bg-base-100 border-base-300 p-6">
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
+            <a href="portfolio_details.html" class="group relative">
+              <img src="assets/img/1.webp" alt="Portfolio Image" class="w-full aspect-square object-cover">
+              <div
+                class="hidden absolute top-0 left-0 right-0 w-full h-full group-hover:grid place-content-center text-white bg-black/30 z-10">
+                <h2 class="text-xl">DR. Ruma Rahman</h2>
+                <p class="text-md">Malibag, Dhaka</p>
+              </div>
+            </a>
+            <a href="portfolio_details.html" class="group relative">
+              <img src="assets/img/1.webp" alt="Portfolio Image" class="w-full aspect-square object-cover">
+              <div
+                class="hidden absolute top-0 left-0 right-0 w-full h-full group-hover:grid place-content-center text-white bg-black/30 z-10">
+                <h2 class="text-xl">DR. Ruma Rahman</h2>
+                <p class="text-md">Malibag, Dhaka</p>
+              </div>
+            </a>
+            <a href="portfolio_details.html" class="group relative">
+              <img src="assets/img/1.webp" alt="Portfolio Image" class="w-full aspect-square object-cover">
+              <div
+                class="hidden absolute top-0 left-0 right-0 w-full h-full group-hover:grid place-content-center text-white bg-black/30 z-10">
+                <h2 class="text-xl">DR. Ruma Rahman</h2>
+                <p class="text-md">Malibag, Dhaka</p>
+              </div>
+            </a>
+            <a href="portfolio_details.html" class="group relative">
+              <img src="assets/img/1.webp" alt="Portfolio Image" class="w-full aspect-square object-cover">
+              <div
+                class="hidden absolute top-0 left-0 right-0 w-full h-full group-hover:grid place-content-center text-white bg-black/30 z-10">
+                <h2 class="text-xl">DR. Ruma Rahman</h2>
+                <p class="text-md">Malibag, Dhaka</p>
+              </div>
+            </a>
+            <a href="portfolio_details.html" class="group relative">
+              <img src="assets/img/1.webp" alt="Portfolio Image" class="w-full aspect-square object-cover">
+              <div
+                class="hidden absolute top-0 left-0 right-0 w-full h-full group-hover:grid place-content-center text-white bg-black/30 z-10">
+                <h2 class="text-xl">DR. Ruma Rahman</h2>
+                <p class="text-md">Malibag, Dhaka</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <input type="radio" name="my_tabs_3" class="tab" aria-label="Residential" />
+        <div class="tab-content bg-base-100 border-base-300 p-6">
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
+            <a href="portfolio_details.html" class="group relative">
+              <img src="assets/img/1.webp" alt="Portfolio Image" class="w-full aspect-square object-cover">
+              <div
+                class="hidden absolute top-0 left-0 right-0 w-full h-full group-hover:grid place-content-center text-white bg-black/30 z-10">
+                <h2 class="text-xl">DR. Ruma Rahman</h2>
+                <p class="text-md">Malibag, Dhaka</p>
+              </div>
+            </a>
+            <a href="portfolio_details.html" class="group relative">
+              <img src="assets/img/1.webp" alt="Portfolio Image" class="w-full aspect-square object-cover">
+              <div
+                class="hidden absolute top-0 left-0 right-0 w-full h-full group-hover:grid place-content-center text-white bg-black/30 z-10">
+                <h2 class="text-xl">DR. Ruma Rahman</h2>
+                <p class="text-md">Malibag, Dhaka</p>
+              </div>
+            </a>
+            <a href="portfolio_details.html" class="group relative">
+              <img src="assets/img/1.webp" alt="Portfolio Image" class="w-full aspect-square object-cover">
+              <div
+                class="hidden absolute top-0 left-0 right-0 w-full h-full group-hover:grid place-content-center text-white bg-black/30 z-10">
+                <h2 class="text-xl">DR. Ruma Rahman</h2>
+                <p class="text-md">Malibag, Dhaka</p>
+              </div>
+            </a>
+            <a href="portfolio_details.html" class="group relative">
+              <img src="assets/img/1.webp" alt="Portfolio Image" class="w-full aspect-square object-cover">
+              <div
+                class="hidden absolute top-0 left-0 right-0 w-full h-full group-hover:grid place-content-center text-white bg-black/30 z-10">
+                <h2 class="text-xl">DR. Ruma Rahman</h2>
+                <p class="text-md">Malibag, Dhaka</p>
+              </div>
+            </a>
+            <a href="portfolio_details.html" class="group relative">
+              <img src="assets/img/1.webp" alt="Portfolio Image" class="w-full aspect-square object-cover">
+              <div
+                class="hidden absolute top-0 left-0 right-0 w-full h-full group-hover:grid place-content-center text-white bg-black/30 z-10">
+                <h2 class="text-xl">DR. Ruma Rahman</h2>
+                <p class="text-md">Malibag, Dhaka</p>
+              </div>
+            </a>
+            <a href="portfolio_details.html" class="group relative">
+              <img src="assets/img/1.webp" alt="Portfolio Image" class="w-full aspect-square object-cover">
+              <div
+                class="hidden absolute top-0 left-0 right-0 w-full h-full group-hover:grid place-content-center text-white bg-black/30 z-10">
+                <h2 class="text-xl">DR. Ruma Rahman</h2>
+                <p class="text-md">Malibag, Dhaka</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <input type="radio" name="my_tabs_3" class="tab" aria-label="Commercial" />
+        <div class="tab-content bg-base-100 border-base-300 p-6">
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
+            <a href="portfolio_details.html" class="group relative">
+              <img src="assets/img/1.webp" alt="Portfolio Image" class="w-full aspect-square object-cover">
+              <div
+                class="hidden absolute top-0 left-0 right-0 w-full h-full group-hover:grid place-content-center text-white bg-black/30 z-10">
+                <h2 class="text-xl">DR. Ruma Rahman</h2>
+                <p class="text-md">Malibag, Dhaka</p>
+              </div>
+            </a>
+            <a href="portfolio_details.html" class="group relative">
+              <img src="assets/img/1.webp" alt="Portfolio Image" class="w-full aspect-square object-cover">
+              <div
+                class="hidden absolute top-0 left-0 right-0 w-full h-full group-hover:grid place-content-center text-white bg-black/30 z-10">
+                <h2 class="text-xl">DR. Ruma Rahman</h2>
+                <p class="text-md">Malibag, Dhaka</p>
+              </div>
+            </a>
+            <a href="portfolio_details.html" class="group relative">
+              <img src="assets/img/1.webp" alt="Portfolio Image" class="w-full aspect-square object-cover">
+              <div
+                class="hidden absolute top-0 left-0 right-0 w-full h-full group-hover:grid place-content-center text-white bg-black/30 z-10">
+                <h2 class="text-xl">DR. Ruma Rahman</h2>
+                <p class="text-md">Malibag, Dhaka</p>
+              </div>
+            </a>
+            <a href="portfolio_details.html" class="group relative">
+              <img src="assets/img/1.webp" alt="Portfolio Image" class="w-full aspect-square object-cover">
+              <div
+                class="hidden absolute top-0 left-0 right-0 w-full h-full group-hover:grid place-content-center text-white bg-black/30 z-10">
+                <h2 class="text-xl">DR. Ruma Rahman</h2>
+                <p class="text-md">Malibag, Dhaka</p>
+              </div>
+            </a>
+            <a href="portfolio_details.html" class="group relative">
+              <img src="assets/img/1.webp" alt="Portfolio Image" class="w-full aspect-square object-cover">
+              <div
+                class="hidden absolute top-0 left-0 right-0 w-full h-full group-hover:grid place-content-center text-white bg-black/30 z-10">
+                <h2 class="text-xl">DR. Ruma Rahman</h2>
+                <p class="text-md">Malibag, Dhaka</p>
+              </div>
+            </a>
+            <a href="portfolio_details.html" class="group relative">
+              <img src="assets/img/1.webp" alt="Portfolio Image" class="w-full aspect-square object-cover">
+              <div
+                class="hidden absolute top-0 left-0 right-0 w-full h-full group-hover:grid place-content-center text-white bg-black/30 z-10">
+                <h2 class="text-xl">DR. Ruma Rahman</h2>
+                <p class="text-md">Malibag, Dhaka</p>
+              </div>
+            </a>
+            <a href="portfolio_details.html" class="group relative">
+              <img src="assets/img/1.webp" alt="Portfolio Image" class="w-full aspect-square object-cover">
+              <div
+                class="hidden absolute top-0 left-0 right-0 w-full h-full group-hover:grid place-content-center text-white bg-black/30 z-10">
+                <h2 class="text-xl">DR. Ruma Rahman</h2>
+                <p class="text-md">Malibag, Dhaka</p>
+              </div>
+            </a>
+            <a href="portfolio_details.html" class="group relative">
+              <img src="assets/img/1.webp" alt="Portfolio Image" class="w-full aspect-square object-cover">
+              <div
+                class="hidden absolute top-0 left-0 right-0 w-full h-full group-hover:grid place-content-center text-white bg-black/30 z-10">
+                <h2 class="text-xl">DR. Ruma Rahman</h2>
+                <p class="text-md">Malibag, Dhaka</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="pt-10 bg-CustomBlack border-t-4 border-CustomOrange">
+    <div class="container mx-auto px-5">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10">
+
+        <div class="font-light text-CustomWhite/60 text-sm space-y-5">
+          <a href="index.html"><img src="assets/img/logo.png" alt="Logo" class="h-20" /></a>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus porro odio ea mollitia nulla
+            commodi fuga quas officia animi iure.</p>
+
+          <ul class="space-y-4">
+            <li class="border-b border-CustomWhite/60 pb-2">
+              <a href="" class="flex items-center space-x-2">
+                <i class="fa-solid fa-location-dot text-CustomOrange"></i>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quas sint non,
+                  dolor inventore voluptate!</span>
+              </a>
+            </li>
+            <li class="flex items-center space-x-2 border-b border-CustomWhite/60 pb-2">
+              <i class="fa-solid fa-phone text-CustomOrange"></i>
+              <a href=""><span>01700000000,</span></a>
+              <a href=""><span>01700000000</span></a>
+            </li>
+            <li class="flex items-center space-x-2">
+              <i class="fa-regular fa-envelope text-CustomOrange"></i>
+              <a href=""><span>info@gmail.com,</span></a>
+              <a href=""><span>contact@gmail.com</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="space-y-5 text-CustomWhite">
+          <h3 class="text-CustomWhite text-2xl">Navigation</h3>
+
+          <div class="flex">
+            <ul class="w-full md:w-1/2 space-y-4 text-xs">
+              <li><a href="about.html" class="space-x-8 hover:text-CustomOrange"><i
+                    class="fa-solid fa-caret-right text-CustomOrange"></i> <span>About Us</span></a>
+              </li>
+              <li><a href="services.html" class="space-x-8 hover:text-CustomOrange"><i
+                    class="fa-solid fa-caret-right text-CustomOrange"></i> <span>Services</span></a>
+              </li>
+              <li><a href="contact.html" class="space-x-8 hover:text-CustomOrange"><i
+                    class="fa-solid fa-caret-right text-CustomOrange"></i> <span>Contact
+                    Us</span></a></li>
+            </ul>
+            <ul class="w-full md:w-1/2 space-y-4 text-xs">
+              <li><a href="" class="space-x-8 hover:text-CustomOrange"><i
+                    class="fa-solid fa-caret-right text-CustomOrange"></i> <span>Terms &
+                    Conditions</span></a></li>
+              <li><a href="" class="space-x-8 hover:text-CustomOrange"><i
+                    class="fa-solid fa-caret-right text-CustomOrange"></i> <span>Blog</span></a>
+              </li>
+              <li><a href="" class="space-x-8 hover:text-CustomOrange"><i
+                    class="fa-solid fa-caret-right text-CustomOrange"></i> <span>Price</span></a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="space-y-5">
+          <h3 class="text-CustomWhite text-2xl">Get Free Calls</h3>
+          <form action="" method="post" class="space-y-2">
+            <input type="text" placeholder="Name" class="input w-full" />
+            <input type="text" placeholder="Contact Number" class="input w-full" />
+            <textarea class="textarea w-full" placeholder="Short Message"></textarea>
+            <button type="submit" class="w-full bg-white/10 text-CustomOrange p-2 rounded">Send <i
+                class="fa-solid fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="w-full bg-black/30 text-white/60 py-4 mt-10">
+      <div class="container mx-auto px-5">
+        <p class="font-light text-center">WOOD ART INTERIORS <i class="fa-regular fa-copyright"></i> 2025 ALL
+          RIGHTS RESERVED</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Swiper JS -->
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <!-- Clients Review -->
+  <script>
+    var swiper = new Swiper('.mySwiper', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      speed: 1000, // Controls slide speed
+      fadeEffect: {
+        crossFade: true
+      },
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false
+      },
+      navigation: {
+        nextEl: '.custom-next',
+        prevEl: '.custom-prev'
+      },
+    });
+  </script>
+
+</body>
+
+</html>

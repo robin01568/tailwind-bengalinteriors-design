@@ -1,0 +1,138 @@
+<!-- Top Navbar -->
+<nav class="bg-CustomBlack text-CustomWhite py-3">
+  <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-5">
+    <!-- Left Side -->
+    <div class="flex flex-col md:flex-row items-center space-x-3">
+      <div class="flex items-center space-x-3">
+        <div class="flex items-center border-r border-dotted border-CustomOrange pr-3">
+          <i class="fa-solid fa-phone text-CustomOrange me-5"></i><span>01700000000</span>
+        </div>
+        <div class="flex items-center border-r border-dotted border-CustomOrange pr-3">
+          <i class="fa-regular fa-envelope text-CustomOrange me-5"></i><span>info@gmail.com</span>
+        </div>
+      </div>
+      <div class="flex items-center">
+        <i class="fa-regular fa-clock text-CustomOrange me-5"></i><span>Sat - Thu : 9:00 - 6:00</span>
+      </div>
+    </div>
+    <!-- Right Side -->
+    <div class="flex items-center space-x-5">
+      <a href="javascript:void(0)" target="_blank" class="text-md"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="javascript:void(0)" target="_blank" class="text-md"><i class="fa-brands fa-facebook"></i></a>
+      <a href="javascript:void(0)" target="_blank" class="text-md"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="javascript:void(0)" target="_blank" class="text-md"><i class="fa-brands fa-pinterest"></i></a>
+      <a href="javascript:void(0)" target="_blank" class="text-md"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </div>
+</nav>
+<!-- Header -->
+<div class="bg-base-100 shadow-sm">
+  <div class="flex items-center container mx-auto py-2 px-5">
+    <!-- Logo -->
+    <div class="flex-1">
+      <a href="index.html"><img src="assets/img/logo.png" alt="Logo" class="h-12" /></a>
+    </div>
+    <!-- Nav Items -->
+    <div class="hidden lg:flex flex-1">
+      <ul class="flex items-center space-x-10 px-1">
+        <li class="font-bold text-sm text-CustomOrange hover:text-CustomOrange">
+          <a href="index.html">HOME</a>
+        </li>
+        <li class="font-bold text-sm hover:text-CustomOrange">
+          <a href="about.html">ABOUT US</a>
+        </li>
+        <li class="relative group text-sm">
+          <a href="services.html" class="font-bold text-sm hover:text-CustomOrange flex">SERVICES <i
+              class="fa-solid fa-sort-down ms-2"></i></a>
+          <!-- First level dropdown -->
+          <ul class="absolute left-0 top-full hidden group-hover:block bg-CustomWhite p-4 space-y-3 shadow-lg z-10">
+            <li class="border-b border-dashed hover:text-CustomOrange whitespace-nowrap"><a
+                href="service_details.html">RESIDENTIAL</a></li>
+
+            <li class="relative border-b border-dashed group/sub">
+              <div class="flex items-center space-x-2 hover:text-CustomOrange whitespace-nowrap"><a
+                  href="service_details.html">COMMERCIAL INTERIOR</a><i class="fa-solid fa-caret-right"></i>
+              </div>
+              <!-- Submenu (second level) -->
+              <ul
+                class="absolute left-full top-0 hidden group-hover/sub:block bg-CustomWhite p-4 space-y-3 shadow-lg z-20">
+                <li class="border-b border-dashed hover:text-CustomOrange whitespace-nowrap"><a
+                    href="service_details.html">BEDROOM
+                    DESIGN</a></li>
+                <li class="border-b border-dashed hover:text-CustomOrange whitespace-nowrap"><a
+                    href="service_details.html">BATHROOM
+                    DESIGN</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+        <li class="font-bold text-sm hover:text-CustomOrange">
+          <a href="portfolio.html">PORTFOLIO</a>
+        </li>
+        <li class="font-bold text-sm hover:text-CustomOrange">
+          <a href="contact.html">CONTACT US</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Drawer -->
+    <div class="block lg:hidden">
+      <div class="drawer">
+        <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content">
+          <!-- Page content here -->
+          <label for="my-drawer" class="text-CustomOrange text-2xl bg-transparent btn drawer-button border-none"><i
+              class="fa-solid fa-bars-staggered"></i></label>
+        </div>
+        <div class="drawer-side">
+          <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+          <div class="bg-CustomWhite text-base-content min-h-full w-80 p-4">
+            <!-- Logo -->
+            <div class="mb-5 border-b border-dashed border-CustomOrange">
+              <a href="index.html"><img src="assets/img/logo.png" alt="Logo" class="h-12" /></a>
+            </div>
+            <ul class="space-y-5">
+              <li class="font-bold text-sm text-CustomOrange hover:text-CustomOrange">
+                <a href="index.html">HOME</a>
+              </li>
+              <li class="font-bold text-sm hover:text-CustomOrange">
+                <a href="about.html">ABOUT US</a>
+              </li>
+              <li class="relative group text-sm">
+                <a href="services.html" class="font-bold text-sm hover:text-CustomOrange">SERVICES
+                  <i class="fa-solid fa-sort-down"></i></a>
+                <!-- First level dropdown -->
+                <ul class="hidden group-hover:block bg-CustomWhite p-4 space-y-3 shadow-lg">
+                  <li class="border-b border-dashed hover:text-CustomOrange whitespace-nowrap"><a
+                      href="service_details.html">RESIDENTIAL</a></li>
+
+                  <li class="relative border-b border-dashed group/sub">
+                    <div class="flex items-center space-x-2 hover:text-CustomOrange whitespace-nowrap">
+                      <a href="service_details.html">COMMERCIAL INTERIOR</a><i class="fa-solid fa-caret-right"></i>
+                    </div>
+                    <!-- Submenu (second level) -->
+                    <ul class="hidden group-hover/sub:block bg-CustomWhite p-4 space-y-3 shadow-lg">
+                      <li class="border-b border-dashed hover:text-CustomOrange whitespace-nowrap">
+                        <a href="service_details.html">BEDROOM DESIGN</a>
+                      </li>
+                      <li class="border-b border-dashed hover:text-CustomOrange whitespace-nowrap">
+                        <a href="service_details.html">BATHROOM DESIGN</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                </ul>
+              </li>
+              <li class="font-bold text-sm hover:text-CustomOrange">
+                <a href="portfolio.html">PORTFOLIO</a>
+              </li>
+              <li class="font-bold text-sm hover:text-CustomOrange">
+                <a href="contact.html">CONTACT US</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

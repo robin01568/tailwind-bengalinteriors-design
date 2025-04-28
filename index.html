@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Home | Wood Art Interiors</title>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" /> -->
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+
+  <!-- DaisyUI (local) -->
+  <link href="assets/css/daisyui.css" rel="stylesheet" type="text/css" />
+
+  <!-- Tailwind (local) -->
+  <script src="assets/js/tailwind.js"></script>
+
+  <!-- Font Awesome 6.5.1 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+
+  <!-- Custom Tailwind CSS Configuration -->
+  <style type="text/tailwindcss">
+    @theme  {
+      --color-CustomOrange: #EF8228;
+      --color-CustomBlack: #1B1B1B;
+      --color-CustomWhite: #ffffff;
+      --font-robot: 'Roboto', sans-serif;
+      --font-cinzel: 'Cinzel', sans-serif;
+      --font-slab: 'Roboto Slab', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-base-200 font-robot">
+  <!-- Top Navbar -->
+  <nav class="bg-CustomBlack text-CustomWhite py-3">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-5">
+      <!-- Left Side -->
+      <div class="flex flex-col md:flex-row items-center space-x-3">
+        <div class="flex items-center space-x-3">
+          <div class="flex items-center border-r border-dotted border-CustomOrange pr-3">
+            <i class="fa-solid fa-phone text-CustomOrange me-5"></i><span>01700000000</span>
+          </div>
+          <div class="flex items-center border-r border-dotted border-CustomOrange pr-3">
+            <i class="fa-regular fa-envelope text-CustomOrange me-5"></i><span>info@gmail.com</span>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <i class="fa-regular fa-clock text-CustomOrange me-5"></i><span>Sat - Thu : 9:00 - 6:00</span>
+        </div>
+      </div>
+      <!-- Right Side -->
+      <div class="flex items-center space-x-5">
+        <a href="javascript:void(0)" target="_blank" class="text-md"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="javascript:void(0)" target="_blank" class="text-md"><i class="fa-brands fa-facebook"></i></a>
+        <a href="javascript:void(0)" target="_blank" class="text-md"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="javascript:void(0)" target="_blank" class="text-md"><i class="fa-brands fa-pinterest"></i></a>
+        <a href="javascript:void(0)" target="_blank" class="text-md"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </nav>
+  <!-- Header -->
+  <div class="bg-base-100 shadow-sm">
+    <div class="flex items-center container mx-auto py-2 px-5">
+      <!-- Logo -->
+      <div class="flex-1">
+        <a href="index.html"><img src="assets/img/logo.png" alt="Logo" class="h-12" /></a>
+      </div>
+      <!-- Nav Items -->
+      <div class="hidden lg:flex flex-1">
+        <ul class="flex items-center space-x-10 px-1">
+          <li class="font-bold text-sm text-CustomOrange hover:text-CustomOrange">
+            <a href="index.html">HOME</a>
+          </li>
+          <li class="font-bold text-sm hover:text-CustomOrange">
+            <a href="about.html">ABOUT US</a>
+          </li>
+          <li class="relative group text-sm">
+            <a href="services.html" class="font-bold text-sm hover:text-CustomOrange flex">SERVICES <i
+                class="fa-solid fa-sort-down ms-2"></i></a>
+            <!-- First level dropdown -->
+            <ul class="absolute left-0 top-full hidden group-hover:block bg-CustomWhite p-4 space-y-3 shadow-lg z-10">
+              <li class="border-b border-dashed hover:text-CustomOrange whitespace-nowrap"><a
+                  href="service_details.html">RESIDENTIAL</a></li>
+
+              <li class="relative border-b border-dashed group/sub">
+                <div class="flex items-center space-x-2 hover:text-CustomOrange whitespace-nowrap"><a
+                    href="service_details.html">COMMERCIAL INTERIOR</a><i class="fa-solid fa-caret-right"></i>
+                </div>
+                <!-- Submenu (second level) -->
+                <ul
+                  class="absolute left-full top-0 hidden group-hover/sub:block bg-CustomWhite p-4 space-y-3 shadow-lg z-20">
+                  <li class="border-b border-dashed hover:text-CustomOrange whitespace-nowrap"><a
+                      href="service_details.html">BEDROOM
+                      DESIGN</a></li>
+                  <li class="border-b border-dashed hover:text-CustomOrange whitespace-nowrap"><a
+                      href="service_details.html">BATHROOM
+                      DESIGN</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </li>
+          <li class="font-bold text-sm hover:text-CustomOrange">
+            <a href="portfolio.html">PORTFOLIO</a>
+          </li>
+          <li class="font-bold text-sm hover:text-CustomOrange">
+            <a href="contact.html">CONTACT US</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Drawer -->
+      <div class="block lg:hidden">
+        <div class="drawer">
+          <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+          <div class="drawer-content">
+            <!-- Page content here -->
+            <label for="my-drawer" class="text-CustomOrange text-2xl bg-transparent btn drawer-button border-none"><i
+                class="fa-solid fa-bars-staggered"></i></label>
+          </div>
+          <div class="drawer-side">
+            <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+            <div class="bg-CustomWhite text-base-content min-h-full w-80 p-4">
+              <!-- Logo -->
+              <div class="mb-5 border-b border-dashed border-CustomOrange">
+                <a href="index.html"><img src="assets/img/logo.png" alt="Logo" class="h-12" /></a>
+              </div>
+              <ul class="space-y-5">
+                <li class="font-bold text-sm text-CustomOrange hover:text-CustomOrange">
+                  <a href="index.html">HOME</a>
+                </li>
+                <li class="font-bold text-sm hover:text-CustomOrange">
+                  <a href="about.html">ABOUT US</a>
+                </li>
+                <li class="relative group text-sm">
+                  <a href="services.html" class="font-bold text-sm hover:text-CustomOrange">SERVICES
+                    <i class="fa-solid fa-sort-down"></i></a>
+                  <!-- First level dropdown -->
+                  <ul class="hidden group-hover:block bg-CustomWhite p-4 space-y-3 shadow-lg">
+                    <li class="border-b border-dashed hover:text-CustomOrange whitespace-nowrap"><a
+                        href="service_details.html">RESIDENTIAL</a></li>
+
+                    <li class="relative border-b border-dashed group/sub">
+                      <div class="flex items-center space-x-2 hover:text-CustomOrange whitespace-nowrap">
+                        <a href="service_details.html">COMMERCIAL INTERIOR</a><i class="fa-solid fa-caret-right"></i>
+                      </div>
+                      <!-- Submenu (second level) -->
+                      <ul class="hidden group-hover/sub:block bg-CustomWhite p-4 space-y-3 shadow-lg">
+                        <li class="border-b border-dashed hover:text-CustomOrange whitespace-nowrap">
+                          <a href="service_details.html">BEDROOM DESIGN</a>
+                        </li>
+                        <li class="border-b border-dashed hover:text-CustomOrange whitespace-nowrap">
+                          <a href="service_details.html">BATHROOM DESIGN</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                  </ul>
+                </li>
+                <li class="font-bold text-sm hover:text-CustomOrange">
+                  <a href="portfolio.html">PORTFOLIO</a>
+                </li>
+                <li class="font-bold text-sm hover:text-CustomOrange">
+                  <a href="contact.html">CONTACT US</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="bg-[url('assets/img/1.webp')] w-full aspect-[5/2] flex items-center justify-center">
+    <div class="w-full md:w-2/3 text-center text-CustomWhite px-5">
+      <h1 class="font-cinzel font-bold text-md md:text-3xl mb-5 md:mb-0">BEST INTERIOR DESIGN COMPANY IN BANGLADESH</h1>
+      <p class="hidden md:block text-md mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit iste at
+        magnam
+        inventore incidunt
+        quidem modi
+        esse saepe et, quibusdam doloremque voluptate voluptatibus. Accusamus, aliquid accusantium obcaecati nostrum,
+        odit iusto doloremque minima, ad quae ius.</p>
+      <a href="javascript:void(0)"
+        class="font-medium text-xs md:text-md border border-CustomOrange px-3 md:px-5 py-3 rounded-full hover:bg-CustomWhite hover:text-CustomBlack">VIEW
+        PROJECTS</a>
+    </div>
+  </section>
+
+  <!-- Welcome Section -->
+  <section class="container mx-auto flex flex-col md:flex-row py-20 px-5 space-y-5 space-x-10">
+    <!-- Left Side -->
+    <div class="w-full md:w-1/2 space-y-2 md:space-y-4">
+      <h1 class="font-slab font-semibold text-xl md:text-3xl">WELCOME TO <span
+          class="text-CustomOrange hover:text-CustomBlack">WOOD
+          ART INTERIORS</span></h1>
+      <h3 class="font-semibold text-md md:text-xl">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat
+        amet, r reprehenderit at nesciunt dolorem quasi?</h3>
+      <p class="text-xs md:text-sm text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut eum atque
+        aspernatur impedit unde deleniti nemo non, ullam tenetur iure explicabo, possimus iste dicta velit omnis,
+        facilis accusamus ipsa. Minima dolorum sunt animi, non unde harum, at deserunt ad atque rem laboriosam quidem
+        recusandae doloremque. Magnam, illo placeat. Quaerat quasi veniam nulla corporis temporibus consectetur
+        perferendis, necessitatibus perspiciatis molestiae, ad alias sed provident esse fuga similique nam nesciunt
+        dolores mollitia quis hic delectus iure. Ea, laudantium. Nobis maiores minus eligendi totam hic amet officiis
+        neque eos asperiores, est quae qui et deserunt assumenda temporibus aliquam. Tempore reiciendis quam doloremque
+        ipsa!</p>
+      <div class="flex items-center space-x-5">
+        <a href="index.html" class="font-semibold text-CustomWhite bg-CustomOrange px-5 py-3 rounded">About Us</a>
+        <div class="">
+          <h3 class="font-bold text-lg">Request a Quote:</h3>
+          <a href="mailto:" class="text-CustomOrange">info@gmail.com</a>
+        </div>
+      </div>
+    </div>
+    <!-- Right Side -->
+    <div class="w-full md:w-1/2">
+      <img src="assets/img/2.webp" alt="Welcome section image" class="w-full aspect-video object-cover" loading="lazy">
+    </div>
+  </section>
+
+  <!-- Category Section -->
+  <section class="relative w-full h-auto bg-[url('assets/img/2.webp')] bg-cover bg-fixed py-20">
+    <div class="absolute inset-0 bg-CustomBlack/70 z-0"></div>
+
+    <div class="relative z-10 container mx-auto px-5 space-y-10">
+      <h1 class="font-slab font-semibold text-CustomWhite text-xl md:text-3xl mb-5">WHAT WE DO</h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <figure>
+          <img src="assets/img/1.webp" alt="Residential Interior" class="w-full aspect-video object-cover"
+            loading="lazy">
+          <h1 class="font-semibold text-CustomWhite text-lg md:text-2xl text-center mt-2"><span
+              class="text-CustomOrange">Residential</span> Interior</h1>
+        </figure>
+        <figure>
+          <img src="assets/img/2.webp" alt="Commercial Interior" class="w-full aspect-video object-cover"
+            loading="lazy">
+          <h1 class="font-semibold text-CustomWhite text-lg md:text-2xl text-center mt-2"><span
+              class="text-CustomOrange">Commercial</span> Interior</h1>
+        </figure>
+        <figure>
+          <img src="assets/img/1.webp" alt="Duplex House Interior" class="w-full aspect-video object-cover"
+            loading="lazy">
+          <h1 class="font-semibold text-CustomWhite text-lg md:text-2xl text-center mt-2"><span
+              class="text-CustomOrange">Duplex
+              House</span> Interior</h1>
+        </figure>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <figure>
+          <img src="assets/img/2.webp" alt="Commercial Interior" class="w-full aspect-video object-cover"
+            loading="lazy">
+          <h1 class="font-semibold text-CustomWhite text-lg md:text-2xl text-center mt-2"><span
+              class="text-CustomOrange">Commercial</span> Interior</h1>
+        </figure>
+        <figure>
+          <img src="assets/img/1.webp" alt="Duplex House Interior" class="w-full aspect-video object-cover"
+            loading="lazy">
+          <h1 class="font-semibold text-CustomWhite text-lg md:text-2xl text-center mt-2"><span
+              class="text-CustomOrange">Duplex
+              House</span> Interior</h1>
+        </figure>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <figure>
+          <img src="assets/img/2.webp" alt="Residential Interior" class="w-full aspect-video object-cover"
+            loading="lazy">
+          <h1 class="font-semibold text-CustomWhite text-lg md:text-2xl text-center mt-2"><span
+              class="text-CustomOrange">Residential</span> Interior</h1>
+        </figure>
+        <figure>
+          <img src="assets/img/1.webp" alt="Commercial Interior" class="w-full aspect-video object-cover"
+            loading="lazy">
+          <h1 class="font-semibold text-CustomWhite text-lg md:text-2xl text-center mt-2"><span
+              class="text-CustomOrange">Commercial</span> Interior</h1>
+        </figure>
+        <figure>
+          <img src="assets/img/2.webp" alt="Duplex House Interior" class="w-full aspect-video object-cover"
+            loading="lazy">
+          <h1 class="font-semibold text-CustomWhite text-lg md:text-2xl text-center mt-2"><span
+              class="text-CustomOrange">Duplex
+              House</span> Interior</h1>
+        </figure>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Director Message -->
+  <section class="container mx-auto py-20 px-5">
+    <div class="flex flex-col md:flex-row space-y-5 space-x-5">
+      <!-- Left Side -->
+      <div class="w-full md:w-3/4">
+        <i class="fa-solid fa-quote-left text-CustomOrange text-5xl md:text-8xl"></i>
+        <h2 class="text-2xl md:text-4xl">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi totam eius
+          vitae perferendis quos.</h2>
+      </div>
+      <!-- Right Side -->
+      <div class="w-full md:w-1/4 shadow-lg">
+        <img src="assets/img/1.webp" alt="Managing Director Image" class="w-full aspect-square object-cover"
+          loading="lazy">
+        <div class="p-4">
+          <h2 class="font-semibold text-lg text-center">Lorem lorem lorems</h2>
+          <h2 class="text-CustomOrange text-center"><i class="border-t border-CustomOrange text-sm">Managing
+              Director</i></h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Projects -->
+  <section class="bg-CustomWhite">
+    <div class="container mx-auto py-20 px-5">
+      <h1 class="font-slab font-semibold text-xl md:text-3xl mb-5">LATEST <span
+          class="text-CustomOrange hover:text-CustomBlack">PROJECTS</span></h1>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 md:gap-10">
+
+        <figure class="relative group overflow-hidden shadow-lg">
+          <img src="assets/img/1.webp" alt="First" class="w-full aspect-video object-cover" loading="lazy" />
+          <div
+            class="absolute inset-0 bg-CustomBlack/50 flex flex-col items-center justify-center text-center opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out">
+            <h1
+              class="text-CustomWhite text-lg font-semibold transform translate-y-4 group-hover:translate-y-0 transition duration-500">
+              IT is first interior project
+            </h1>
+            <p
+              class="text-CustomOrange text-sm mt-2 transform translate-y-4 group-hover:translate-y-0 transition duration-500 delay-100">
+              Residential
+            </p>
+          </div>
+        </figure>
+        <figure class="relative group overflow-hidden shadow-lg">
+          <img src="assets/img/2.webp" alt="First" class="w-full aspect-video object-cover" loading="lazy" />
+          <div
+            class="absolute inset-0 bg-CustomBlack/50 flex flex-col items-center justify-center text-center opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out">
+            <h1
+              class="text-CustomWhite text-lg font-semibold transform translate-y-4 group-hover:translate-y-0 transition duration-500">
+              IT is first interior project
+            </h1>
+            <p
+              class="text-CustomOrange text-sm mt-2 transform translate-y-4 group-hover:translate-y-0 transition duration-500 delay-100">
+              Residential
+            </p>
+          </div>
+        </figure>
+        <figure class="relative group overflow-hidden shadow-lg">
+          <img src="assets/img/1.webp" alt="First" class="w-full aspect-video object-cover" loading="lazy" />
+          <div
+            class="absolute inset-0 bg-CustomBlack/50 flex flex-col items-center justify-center text-center opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out">
+            <h1
+              class="text-CustomWhite text-lg font-semibold transform translate-y-4 group-hover:translate-y-0 transition duration-500">
+              IT is first interior project
+            </h1>
+            <p
+              class="text-CustomOrange text-sm mt-2 transform translate-y-4 group-hover:translate-y-0 transition duration-500 delay-100">
+              Residential
+            </p>
+          </div>
+        </figure>
+        <figure class="relative group overflow-hidden shadow-lg">
+          <img src="assets/img/2.webp" alt="First" class="w-full aspect-video object-cover" loading="lazy" />
+          <div
+            class="absolute inset-0 bg-CustomBlack/50 flex flex-col items-center justify-center text-center opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out">
+            <h1
+              class="text-CustomWhite text-lg font-semibold transform translate-y-4 group-hover:translate-y-0 transition duration-500">
+              IT is first interior project
+            </h1>
+            <p
+              class="text-CustomOrange text-sm mt-2 transform translate-y-4 group-hover:translate-y-0 transition duration-500 delay-100">
+              Residential
+            </p>
+          </div>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Success Section -->
+  <section class="relative w-full h-auto bg-[url('assets/img/1.webp')] bg-cover bg-fixed py-20">
+    <div class="absolute inset-0 bg-CustomBlack/70 z-0"></div>
+
+    <div class="relative z-10 container mx-auto px-5 space-y-10 flex flex-col items-center justify-center text-center">
+      <h1 class="font-slab font-semibold text-CustomOrange text-xl md:text-3xl mb-5">With the Blessing of all, "Wood Art
+        Interiors" Truned 3 Years Old</h1>
+      <p class="font-cinzel text-CustomWhite">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+        consequuntur
+        error perferendis corporis qui, dolore porro dolorum repudiandae maxime, fuga eveniet fugit. Nostrum, odio. Quod
+        culpa error ea ducimus fugit.</p>
+      <a href="index.html" class="font-semibold text-CustomWhite bg-CustomOrange px-5 py-3 rounded">About Us</a>
+    </div>
+  </section>
+
+  <!-- Our Working Process -->
+  <section class="container mx-auto py-20 px-5">
+    <h1 class="font-slab font-semibold text-xl md:text-3xl mb-2">OUR WORKING <span
+        class="text-CustomOrange hover:text-CustomBlack">PROCESS</span></h1>
+    <p class="mb-10">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum tenetur laborum ducimus quae
+      voluptatibus asperiores deleniti corporis quia commodi itaque?</p>
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 md:gap-10">
+      <div class="flex flex-col items-center justify-center">
+        <span
+          class="h-40 w-40 flex items-center justify-center border-6 border-CustomWhite/70 hover:border-CustomOrange rounded-full"><i
+            class="fa-solid fa-house-laptop text-CustomOrange text-6xl"></i></span>
+        <h2 class="font-semibold text-lg mt-4">Get Appointment</h2>
+      </div>
+      <div class="flex flex-col items-center justify-center">
+        <span
+          class="h-40 w-40 flex items-center justify-center border-6 border-CustomWhite/70 hover:border-CustomOrange rounded-full"><i
+            class="fa-solid fa-mobile-screen-button text-CustomOrange text-6xl"></i></span>
+        <h2 class="font-semibold text-lg mt-4">Meet Customers</h2>
+      </div>
+      <div class="flex flex-col items-center justify-center">
+        <span
+          class="h-40 w-40 flex items-center justify-center border-6 border-CustomWhite/70 hover:border-CustomOrange rounded-full"><i
+            class="fa-solid fa-microphone text-CustomOrange text-6xl"></i></span>
+        <h2 class="font-semibold text-lg mt-4">Processing</h2>
+      </div>
+      <div class="flex flex-col items-center justify-center">
+        <span
+          class="h-40 w-40 flex items-center justify-center border-6 border-CustomWhite/70 hover:border-CustomOrange rounded-full"><i
+            class="fa-solid fa-paper-plane text-CustomOrange text-6xl"></i></span>
+        <h2 class="font-semibold text-lg mt-4">Final Delivery</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="bg-CustomWhite">
+    <div class="container mx-auto py-20 px-5">
+      <h1 class="font-slab font-semibold text-xl md:text-3xl mb-2">WHAT MAKES US BEST INTERIOR DESIGN IN <span
+          class="text-CustomOrange hover:text-CustomBlack">BANGLADESH</span></h1>
+      <p class="mb-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci hic possimus odit esse qui
+        voluptas aliquid voluptate suscipit expedita similique, totam, nesciunt fuga ea officia iste nobis ipsam?
+        Nesciunt, adipisci dolores! Debitis placeat architecto sapiente qui nihil soluta atque laborum, similique sed
+        veniam odit nam repudiandae quis vero id molestias itaque explicabo, voluptatibus quod! Repellat illum dolores
+        perspiciatis porro, aliquid quis corrupti repudiandae, quos numquam repellendus nihil molestiae optio voluptate
+        aspernatur enim eius ratione, recusandae impedit ducimus cum suscipit dolorem voluptas quia aut. Dolorem nihil
+        iste, ad nemo fuga earum. Repellendus vero quibusdam obcaecati aspernatur? Quos voluptatibus hic quis eius.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10">
+
+        <div class="shadow-md shadow-CustomOrange rounded-xl p-5">
+          <h2 class="font-semibold text-CustomOrange text-xl text-center mb-2">Custom Design Solutions</h2>
+          <p class="text-sm md:text-md text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nemo
+            eveniet beatae cumque ratione aperiam ut reiciendis. Labore consequatur voluptas tempora nulla dolores qui
+            obcaecati repudiandae accusantium exercitationem quasi, consequuntur rem molestiae excepturi, quisquam
+            similique blanditiis officia, provident tempore. Odit.</p>
+        </div>
+        <div class="shadow-md shadow-CustomOrange rounded-xl p-5">
+          <h2 class="font-semibold text-CustomOrange text-xl text-center mb-2">Custom Design Solutions</h2>
+          <p class="text-sm md:text-md text-center">Lore nulla dolores qui obcaecati repudiandae accusantium
+            exercitationem quasi, consequuntur rem molestiae excepturi, quisquam similique blanditiis officia, provident
+            tempore. udiandae accusantium exercitationem quasi, consequuntur rem molestiae excepturi, quisquam similique
+            blanditiis officia, provident tempore.</p>
+        </div>
+        <div class="shadow-md shadow-CustomOrange rounded-xl p-5">
+          <h2 class="font-semibold text-CustomOrange text-xl text-center mb-2">Custom Design Solutions</h2>
+          <p class="text-sm md:text-md text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nemo
+            eveniet beatae cumque ratione aperiam ut reiciendis. Labore consequatur voluptas tm ipsum dolor sit amet
+            consecia, pr
+            bcaecati repudiandae accusantium exercitationem quasi, consequuntur rem molestiae excepturi, quisquam
+            similique blanditiis officia, provident tempore. Odit.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 mt-5 md:mt-10">
+        <div class="shadow-md shadow-CustomOrange rounded-xl p-5">
+          <h2 class="font-semibold text-CustomOrange text-xl text-center mb-2">Custom Design Solutions</h2>
+          <p class="text-sm md:text-md text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nemo
+            eveniet beatae cumque ratione aperiam ut reiciendis. Labore consequatur voluptas tm ipsum dolor sit amet
+            consecia, pr
+            bcaecati repudiandae accusantium exercitationem quasi, consequuntur rem molestiae excepturi, quisquam
+            similique blanditiis officia, provident tempore. Odit.</p>
+        </div>
+        <div class="shadow-md shadow-CustomOrange rounded-xl p-5">
+          <h2 class="font-semibold text-CustomOrange text-xl text-center mb-2">Custom Design Solutions</h2>
+          <p class="text-sm md:text-md text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nemo
+            eveniet beatae cumque ratione aperiam ut reiciendis. Labore consequatur voluptas tm ipsum dolor sit amet
+            consecia, pr
+            bcaecati repudiandae accusantium exercitationem quasi, consequuntur rem molestiae excepturi, quisquam
+            similique blanditiis officia, provident tempore. Odit.</p>
+        </div>
+      </div>
+
+      <p class="mt-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci hic possimus odit esse qui
+        voluptas aliquid voluptate suscipit expedita similique, totam, nesciunt fuga ea officia iste nobis ipsam?
+        Nesciunt, adipisci dolores! Debitis placeat architecto sapiente qui nihil soluta atque laborum, similique sed
+        veniam odit nam repudiandae quis vero id molestias itaque explicabo, voluptatibus quod! Repellat illum dolores
+        perspiciatis porro, aliquid quis corrupti repudiandae, quos numquam repellendus nihil molestiae optio voluptate
+        aspernatur enim eius ratione, recusandae impedit ducimus cum suscipit dolorem voluptas quia aut. Dolorem nihil
+        iste, ad nemo fuga earum. Repellendus vero quibusdam obcaecati aspernatur? Quos voluptatibus hic quis eius.</p>
+
+    </div>
+  </section>
+
+  <!-- Counter Section -->
+  <section class="relative w-full h-auto bg-[url('assets/img/1.webp')] bg-cover bg-fixed py-20">
+    <div class="absolute inset-0 bg-CustomBlack/70 z-0"></div>
+
+    <div class="relative z-10 container mx-auto px-5 space-y-10 flex flex-col items-center justify-center text-center">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10 lg:gap-20">
+
+        <div class="">
+          <span class="font-bold text-CustomOrange text-5xl md:text-7xl">14</span>
+          <p class="font-slab text-CustomWhite text-xl mt-2">Years of Experinces</p>
+        </div>
+        <div class="">
+          <span class="font-bold text-CustomOrange text-5xl md:text-7xl">100+</span>
+          <p class="font-slab text-CustomWhite text-xl mt-2">Completed Projets</p>
+        </div>
+        <div class="">
+          <span class="font-bold text-CustomOrange text-5xl md:text-7xl">100+</span>
+          <p class="font-slab text-CustomWhite text-xl mt-2">Stisfied Clients</p>
+        </div>
+        <div class="">
+          <span class="font-bold text-CustomOrange text-5xl md:text-7xl">4</span>
+          <p class="font-slab text-CustomWhite text-xl mt-2">Awards</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Clients Review -->
+  <section class="bg-CustomWhite">
+    <div class="container mx-auto py-20 px-5">
+      <div class="w-full md:w-4/5 mx-auto">
+        <div class="flex items-center justify-between gap-4">
+          <!-- Navigation Button -->
+          <button
+            class="custom-prev text-CustomWhite bg-CustomOrange hover:bg-CustomBlack h-8 w-8 rounded-full cursor-pointer"><i
+              class="fa-solid fa-angle-left"></i></button>
+
+          <!-- Slider -->
+          <div class="swiper mySwiper w-full h-auto mx-auto">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide relative w-full h-auto">
+                <div class="flex flex-col items-center justify-center text-center space-y-3">
+
+                  <i class="fa-solid fa-quote-left text-CustomOrange text-4xl md:text-6xl"></i>
+
+                  <div class="flex items-center space-x-1">
+                    <i class="fa-solid fa-star text-yellow-500"></i>
+                    <i class="fa-solid fa-star text-yellow-500"></i>
+                    <i class="fa-solid fa-star text-yellow-500"></i>
+                    <i class="fa-solid fa-star text-yellow-500"></i>
+                    <i class="fa-solid fa-star text-yellow-500"></i>
+                  </div>
+
+                  <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore velit minima
+                    possimus doloremque
+                    repellat, repudiandaetias? Ipsum quam magni ipsam ducimus eos repellat hic tempora, iusto unde est
+                    eligendi blanditiis tenetur laudantium.</h1>
+
+                  <p class="font-semibold text-lg text-CustomOrange">AMIN KHAN</p>
+                </div>
+              </div>
+              <div class="swiper-slide relative w-full h-auto">
+                <div class="flex flex-col items-center justify-center text-center space-y-3">
+
+                  <i class="fa-solid fa-quote-left text-CustomOrange text-4xl md:text-6xl"></i>
+
+                  <div class="flex items-center space-x-1">
+                    <i class="fa-solid fa-star text-yellow-500"></i>
+                    <i class="fa-solid fa-star text-yellow-500"></i>
+                    <i class="fa-solid fa-star text-yellow-500"></i>
+                    <i class="fa-solid fa-star text-yellow-500"></i>
+                    <i class="fa-solid fa-star text-yellow-500"></i>
+                  </div>
+
+                  <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore velit minima
+                    possimus doloremque
+                    repellat, repudiandae fugit fssed. Aspernatur culpa veritatis eius voluptatem doloribus
+                    maiores, alias, eveniet et asperiores perferendis quas? Ipsa at odio impedit id ducimus voluptates
+                    distinctio quod molestias? Ipsum quam magni ipsam ducimus eos repellat hic tempora, iusto unde est
+                    eligendi blanditiis tenetur laudantium.</h1>
+
+                  <p class="font-semibold text-lg text-CustomOrange">FARZANA RAHMAN</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Navigation Button -->
+          <button
+            class="custom-next text-CustomWhite bg-CustomOrange hover:bg-CustomBlack h-8 w-8 rounded-full cursor-pointer"><i
+              class="fa-solid fa-angle-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="container mx-auto py-20 px-5">
+    <h1 class="font-slab font-semibold text-xl md:text-3xl mb-2">FAQ - 
+      <span class="text-CustomOrange hover:text-CustomBlack">
+        YOUR QUESTIONS, OUR ANSWERS
+      </span>
+    </h1>
+    <p class="mb-10">Lorem, ipsum dolor sit amet cdae, quos numm repellendus nihil molestiae optio voluptate
+      aspernatur enim eius ratione, recusandae impedit ducimus cum hic quis eius.
+    </p>
+
+    <div class="flex flex-col md:flex-row space-x-5 md:space-x-10">
+      <!-- Left Side -->
+      <div class="w-full md:w-1/2">
+        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+          <input type="radio" name="my-accordion-1" checked="checked" />
+          <div class="collapse-title font-semibold text-CustomOrange">How do I create an account?</div>
+          <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the
+            registration process.</div>
+        </div>
+        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+          <input type="radio" name="my-accordion-1" />
+          <div class="collapse-title font-semibold text-CustomOrange">I forgot my password. What should I do?</div>
+          <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the
+            instructions sent to your email.</div>
+        </div>
+        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+          <input type="radio" name="my-accordion-1" />
+          <div class="collapse-title font-semibold text-CustomOrange">How do I update my profile information?</div>
+          <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side -->
+      <div class="w-full md:w-1/2">
+        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title font-semibold text-CustomOrange">How do I create an account?</div>
+          <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the
+            registration process.</div>
+        </div>
+        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title font-semibold text-CustomOrange">I forgot my password. What should I do?</div>
+          <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the
+            instructions sent to your email.</div>
+        </div>
+        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title font-semibold text-CustomOrange">How do I update my profile information?</div>
+          <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest News -->
+  <section class="bg-CustomWhite">
+    <div class="container mx-auto py-20 px-5">
+      <h1 class="font-slab font-semibold text-xl md:text-3xl mb-5">LATEST <span
+          class="text-CustomOrange hover:text-CustomBlack">NEWS</span></h1>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 md:gap-10">
+
+        <div class="">
+          <figure class="w-full aspect-video">
+            <img src="assets/img/1.webp" alt="Blog 1" loading="lazy">
+          </figure>
+          <div class="flex items-center space-x-2 py-1 md:py-2 mb-0 md:mb-3">
+            <span class="bg-slate-100 px-1 text-xs"><i class="fa-solid fa-calendar-days me-1"></i> March 10,2025</span>
+            <span class="hidden md:block bg-slate-100 px-1 text-xs"><i class="fa-solid fa-user me-1"></i> farjan
+              rahman</span>
+          </div>
+          <h1 class="font-semibold text-sm md:text-md text-CustomOrange mb-1 md:mb-2">How to Lorem ipsum, dolor sit amet
+            consectetur adipisicing
+            elit, minus!</h1>
+          <p class="hidden md:block text-sm mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+            voluptatem incidunt
+            temporibus libero error in, minus a sed soluta magnam dolorem molestiae deserunt voluptatibus eaque
+            exercitationem quod enim ex rerum.</p>
+          <a href="" class="text-CustomOrange text-xs md:text-sm bg-orange-100 py-1 px-2">See More</a>
+        </div>
+        <div class="">
+          <figure class="w-full aspect-video">
+            <img src="assets/img/1.webp" alt="Blog 1" loading="lazy">
+          </figure>
+          <div class="flex items-center space-x-2 py-1 md:py-2 mb-0 md:mb-3">
+            <span class="bg-slate-100 px-1 text-xs"><i class="fa-solid fa-calendar-days me-1"></i> March 10,2025</span>
+            <span class="hidden md:block bg-slate-100 px-1 text-xs"><i class="fa-solid fa-user me-1"></i> farjan
+              rahman</span>
+          </div>
+          <h1 class="font-semibold text-sm md:text-md text-CustomOrange mb-1 md:mb-2">How to tur adipisicing elit,
+            minus!</h1>
+          <p class="hidden md:block text-sm mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+            voluptatem incidunt
+            temporibus libero error in, minus a sed soluta magnam dolorem molestiae deserunt voluptatibus eaque
+            exercitationem quod enim ex rerum.</p>
+          <a href="" class="text-CustomOrange text-xs md:text-sm bg-orange-100 py-1 px-2">See More</a>
+        </div>
+        <div class="">
+          <figure class="w-full aspect-video">
+            <img src="assets/img/1.webp" alt="Blog 1" loading="lazy">
+          </figure>
+          <div class="flex items-center space-x-2 py-1 md:py-2 mb-0 md:mb-3">
+            <span class="bg-slate-100 px-1 text-xs"><i class="fa-solid fa-calendar-days me-1"></i> March 10,2025</span>
+            <span class="hidden md:block bg-slate-100 px-1 text-xs"><i class="fa-solid fa-user me-1"></i> farjan
+              rahman</span>
+          </div>
+          <h1 class="font-semibold text-sm md:text-md text-CustomOrange mb-1 md:mb-2">How to Lorem ipsum, dolor sit amet
+            consectetur adipisicing
+            elit, minus!</h1>
+          <p class="hidden md:block text-sm mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+            voluptatem incidunt
+            temporibus libero error in, minus a sed soluta magnam dolorem molestiae deserunt voluptatibus eaque
+            exercitationem quod enim ex rerum.</p>
+          <a href="" class="text-CustomOrange text-xs md:text-sm bg-orange-100 py-1 px-2">See More</a>
+        </div>
+        <div class="">
+          <figure class="w-full aspect-video">
+            <img src="assets/img/1.webp" alt="Blog 1" loading="lazy">
+          </figure>
+          <div class="flex items-center space-x-2 py-1 md:py-2 mb-0 md:mb-3">
+            <span class="bg-slate-100 px-1 text-xs"><i class="fa-solid fa-calendar-days me-1"></i> March 10,2025</span>
+            <span class="hidden md:block bg-slate-100 px-1 text-xs"><i class="fa-solid fa-user me-1"></i> farjan
+              rahman</span>
+          </div>
+          <h1 class="font-semibold text-sm md:text-md text-CustomOrange mb-1 md:mb-2">How to Lorem ipsum, dolor sit amet
+            consectetur adipisicing
+            elit, minus!</h1>
+          <p class="hidden md:block text-sm mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+            voluptatem incidunt
+            temporibus libero error in, minus a sed soluta magnam dolorem molestiae deserunt voluptatibus eaque
+            exercitationem quod enim ex rerum.</p>
+          <a href="" class="text-CustomOrange text-xs md:text-sm bg-orange-100 py-1 px-2">See More</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="pt-10 bg-CustomBlack border-t-4 border-CustomOrange">
+    <div class="container mx-auto px-5">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10">
+
+        <div class="font-light text-CustomWhite/60 text-sm space-y-5">
+          <a href="index.html"><img src="assets/img/logo.png" alt="Logo" class="h-20" /></a>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus porro odio ea mollitia nulla commodi
+            fuga quas officia animi iure.</p>
+
+          <ul class="space-y-4">
+            <li class="border-b border-CustomWhite/60 pb-2">
+              <a href="" class="flex items-center space-x-2">
+                <i class="fa-solid fa-location-dot text-CustomOrange"></i>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quas sint non, dolor inventore
+                  voluptate!</span>
+              </a>
+            </li>
+            <li class="flex items-center space-x-2 border-b border-CustomWhite/60 pb-2">
+              <i class="fa-solid fa-phone text-CustomOrange"></i>
+              <a href=""><span>01700000000,</span></a>
+              <a href=""><span>01700000000</span></a>
+            </li>
+            <li class="flex items-center space-x-2">
+              <i class="fa-regular fa-envelope text-CustomOrange"></i>
+              <a href=""><span>info@gmail.com,</span></a>
+              <a href=""><span>contact@gmail.com</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="space-y-5 text-CustomWhite">
+          <h3 class="text-CustomWhite text-2xl">Navigation</h3>
+
+          <div class="flex">
+            <ul class="w-full md:w-1/2 space-y-4 text-xs">
+              <li>
+                <a href="about.html" class="space-x-8 hover:text-CustomOrange">
+                  <i class="fa-solid fa-caret-right text-CustomOrange"></i> <span>About Us</span>
+                </a>
+              </li>
+              <li>
+                <a href="services.html" class="space-x-8 hover:text-CustomOrange">
+                  <i class="fa-solid fa-caret-right text-CustomOrange"></i> <span>Services</span>
+                </a>
+              </li>
+              <li>
+                <a href="contact.html" class="space-x-8 hover:text-CustomOrange">
+                  <i class="fa-solid fa-caret-right text-CustomOrange"></i> <span>Contact Us</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="w-full md:w-1/2 space-y-4 text-xs">
+              <li>
+                <a href="terms_conditions.html" class="space-x-8 hover:text-CustomOrange">
+                  <i class="fa-solid fa-caret-right text-CustomOrange"></i> <span>Terms & Conditions</span>
+                </a>
+              </li>
+              <li>
+                <a href="privacy_policy.html" class="space-x-8 hover:text-CustomOrange">
+                  <i class="fa-solid fa-caret-right text-CustomOrange"></i> <span>Privacy Policy</span>
+                </a>
+              </li>
+              <li>
+                <a href="blog.html" class="space-x-8 hover:text-CustomOrange">
+                  <i class="fa-solid fa-caret-right text-CustomOrange"></i> <span>Blog</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="space-y-5">
+          <h3 class="text-CustomWhite text-2xl">Get Free Calls</h3>
+          <form action="" method="post" class="space-y-2">
+            <input type="text" placeholder="Name" class="input w-full" />
+            <input type="text" placeholder="Contact Number" class="input w-full" />
+            <textarea class="textarea w-full" placeholder="Short Message"></textarea>
+            <button type="submit" class="w-full bg-white/10 text-CustomOrange p-2 rounded">Send <i
+                class="fa-solid fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="w-full bg-black/30 text-white/60 py-4 mt-10">
+      <div class="container mx-auto px-5">
+        <p class="font-light text-center">WOOD ART INTERIORS <i class="fa-regular fa-copyright"></i> 2025 ALL RIGHTS
+          RESERVED</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Swiper JS -->
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <!-- Clients Review -->
+  <script>
+    var swiper = new Swiper('.mySwiper', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      speed: 1000, // Controls slide speed
+      fadeEffect: {
+        crossFade: true
+      },
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false
+      },
+      navigation: {
+        nextEl: '.custom-next',
+        prevEl: '.custom-prev'
+      },
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact Us | Wood Art Interiors</title>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" /> -->
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+
+  <!-- DaisyUI (local) -->
+  <link href="assets/css/daisyui.css" rel="stylesheet" type="text/css" />
+  <!-- Tailwind (local) -->
+  <script src="assets/js/tailwind.js"></script>
+
+  <!-- Font Awesome 6.5.1 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+
+  <!-- Custom Tailwind CSS Configuration -->
+  <style type="text/tailwindcss">
+    @theme  {
+      --color-CustomOrange: #EF8228;
+      --color-CustomBlack: #1B1B1B;
+      --color-CustomWhite: #ffffff;
+      --font-robot: 'Roboto', sans-serif;
+      --font-cinzel: 'Cinzel', sans-serif;
+      --font-slab: 'Roboto Slab', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-base-200 font-robot">
+  <!-- Top Navbar -->
+  <nav class="bg-CustomBlack text-CustomWhite py-3">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-5">
+      <!-- Left Side -->
+      <div class="flex flex-col md:flex-row items-center space-x-3">
+        <div class="flex items-center space-x-3">
+          <div class="flex items-center border-r border-dotted border-CustomOrange pr-3">
+            <i class="fa-solid fa-phone text-CustomOrange me-5"></i><span>01700000000</span>
+          </div>
+          <div class="flex items-center border-r border-dotted border-CustomOrange pr-3">
+            <i class="fa-regular fa-envelope text-CustomOrange me-5"></i><span>info@gmail.com</span>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <i class="fa-regular fa-clock text-CustomOrange me-5"></i><span>Sat - Thu : 9:00 - 6:00</span>
+        </div>
+      </div>
+      <!-- Right Side -->
+      <div class="flex items-center space-x-5">
+        <a href="javascript:void(0)" target="_blank" class="text-md"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="javascript:void(0)" target="_blank" class="text-md"><i class="fa-brands fa-facebook"></i></a>
+        <a href="javascript:void(0)" target="_blank" class="text-md"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="javascript:void(0)" target="_blank" class="text-md"><i class="fa-brands fa-pinterest"></i></a>
+        <a href="javascript:void(0)" target="_blank" class="text-md"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </nav>
+  <!-- Header -->
+  <div class="bg-base-100 shadow-sm">
+    <div class="flex items-center container mx-auto py-2 px-5">
+      <!-- Logo -->
+      <div class="flex-1">
+        <a href="index.html"><img src="assets/img/logo.png" alt="Logo" class="h-12" /></a>
+      </div>
+      <!-- Nav Items -->
+      <div class="hidden lg:flex flex-1">
+        <ul class="flex items-center space-x-10 px-1">
+          <li class="font-bold text-sm hover:text-CustomOrange">
+            <a href="index.html">HOME</a>
+          </li>
+          <li class="font-bold text-sm hover:text-CustomOrange">
+            <a href="about.html">ABOUT US</a>
+          </li>
+          <li class="relative group text-sm">
+            <a href="services.html" class="font-bold text-sm hover:text-CustomOrange flex">SERVICES <i
+                class="fa-solid fa-sort-down ms-2"></i></a>
+            <!-- First level dropdown -->
+            <ul class="absolute left-0 top-full hidden group-hover:block bg-CustomWhite p-4 space-y-3 shadow-lg z-10">
+              <li class="border-b border-dashed hover:text-CustomOrange whitespace-nowrap"><a
+                  href="service_details.html">RESIDENTIAL</a></li>
+
+              <li class="relative border-b border-dashed group/sub">
+                <div class="flex items-center space-x-2 hover:text-CustomOrange whitespace-nowrap"><a
+                    href="service_details.html">COMMERCIAL INTERIOR</a><i class="fa-solid fa-caret-right"></i>
+                </div>
+                <!-- Submenu (second level) -->
+                <ul
+                  class="absolute left-full top-0 hidden group-hover/sub:block bg-CustomWhite p-4 space-y-3 shadow-lg z-20">
+                  <li class="border-b border-dashed hover:text-CustomOrange whitespace-nowrap"><a
+                      href="service_details.html">BEDROOM
+                      DESIGN</a></li>
+                  <li class="border-b border-dashed hover:text-CustomOrange whitespace-nowrap"><a
+                      href="service_details.html">BATHROOM
+                      DESIGN</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </li>
+          <li class="font-bold text-sm hover:text-CustomOrange">
+            <a href="portfolio.html">PORTFOLIO</a>
+          </li>
+          <li class="font-bold text-sm text-CustomOrange hover:text-CustomOrange">
+            <a href="contact.html">CONTACT US</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Drawer -->
+      <div class="block lg:hidden">
+        <div class="drawer">
+          <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+          <div class="drawer-content">
+            <!-- Page content here -->
+            <label for="my-drawer" class="text-CustomOrange text-2xl bg-transparent btn drawer-button border-none"><i
+                class="fa-solid fa-bars-staggered"></i></label>
+          </div>
+          <div class="drawer-side">
+            <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+            <div class="bg-CustomWhite text-base-content min-h-full w-80 p-4">
+              <!-- Logo -->
+              <div class="mb-5 border-b border-dashed border-CustomOrange">
+                <a href="index.html"><img src="assets/img/logo.png" alt="Logo" class="h-12" /></a>
+              </div>
+              <ul class="space-y-5">
+                <li class="font-bold text-sm hover:text-CustomOrange">
+                  <a href="index.html">HOME</a>
+                </li>
+                <li class="font-bold text-sm hover:text-CustomOrange">
+                  <a href="about.html">ABOUT US</a>
+                </li>
+                <li class="relative group text-sm">
+                  <a href="services.html" class="font-bold text-sm hover:text-CustomOrange">SERVICES
+                    <i class="fa-solid fa-sort-down"></i></a>
+                  <!-- First level dropdown -->
+                  <ul class="hidden group-hover:block bg-CustomWhite p-4 space-y-3 shadow-lg">
+                    <li class="border-b border-dashed hover:text-CustomOrange whitespace-nowrap"><a
+                        href="service_details.html">RESIDENTIAL</a></li>
+
+                    <li class="relative border-b border-dashed group/sub">
+                      <div class="flex items-center space-x-2 hover:text-CustomOrange whitespace-nowrap">
+                        <a href="service_details.html">COMMERCIAL INTERIOR</a><i class="fa-solid fa-caret-right"></i>
+                      </div>
+                      <!-- Submenu (second level) -->
+                      <ul class="hidden group-hover/sub:block bg-CustomWhite p-4 space-y-3 shadow-lg">
+                        <li class="border-b border-dashed hover:text-CustomOrange whitespace-nowrap">
+                          <a href="service_details.html">BEDROOM DESIGN</a>
+                        </li>
+                        <li class="border-b border-dashed hover:text-CustomOrange whitespace-nowrap">
+                          <a href="service_details.html">BATHROOM DESIGN</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                  </ul>
+                </li>
+                <li class="font-bold text-sm hover:text-CustomOrange">
+                  <a href="portfolio.html">PORTFOLIO</a>
+                </li>
+                <li class="font-bold text-sm text-CustomOrange hover:text-CustomOrange">
+                  <a href="contact.html">CONTACT US</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="bg-[url('assets/img/1.webp')] w-full aspect-[5/1] flex items-center justify-center">
+    <div class="w-full md:w-2/3 text-center text-CustomWhite px-5">
+      <h1 class="font-cinzel font-bold text-md md:text-3xl mb-5 md:mb-0">GET IN TOUCH</h1>
+    </div>
+  </section>
+
+  <!-- Form Section -->
+  <section class="container mx-auto flex flex-col md:flex-row py-20 px-5 space-y-5 space-x-5">
+    <!-- Left Side -->
+    <div class="w-full md:w-1/2 space-y-2 md:space-y-4">
+      <h1 class="font-slab font-semibold text-xl md:text-4xl">CALL US FOR<span
+          class="text-CustomOrange hover:text-CustomBlack"> CONSULTING</span></h1>
+      <h3 class="font-semibold text-md md:text-lg">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Repellat
+        amet, r reprehenderit at nesciunt dolorem quasi?</h3>
+      <p class="text-xs md:text-sm text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut eum
+        atque
+        aspernatur impedit unde deleniti nemo non, ullam tenetur iure explicabo, possimus iste dicta velit
+        omnis,
+        facilis accus iure. Ea, laudantium. Nobis maiores minus eligendi totam hic amet
+        officiis
+        neque eos asperiores, est quae qui et deserunt assumenda temporibus aliquam. Tempore reiciendis quam
+        doloremque
+        ipsa!</p>
+      <div class="">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/6stlCkUDG_s?si=k_iVKrKrXHXmp79C"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+    <!-- Right Side -->
+    <div class="w-full md:w-1/2">
+      <form action="" method="post" class="space-y-5">
+        <h1 class="font-slab font-semibold text-xl md:text-3xl mb-2">Send Us a <span
+            class="text-CustomOrange hover:text-CustomBlack">Message</span>
+        </h1>
+
+        <input type="text" placeholder="Full Name" class="w-full input border-CustomOrange" />
+        <input type="text" placeholder="Phone" class="w-full input border-CustomOrange" />
+        <input type="email" placeholder="Email" class="w-full input border-CustomOrange" />
+        <textarea class="textarea w-full border-CustomOrange" placeholder="Write Us"></textarea>
+
+        <div class="flex justify-end">
+          <button type="submit" class="text-white bg-CustomOrange px-10 py-3 rounded-full">Send <i
+              class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Let's Meet -->
+  <section class="bg-CustomWhite">
+    <div class="container mx-auto py-20 px-5">
+      <h1 class="font-slab font-semibold text-xl md:text-3xl mb-2 text-center"><span
+          class="text-CustomOrange hover:text-CustomBlack">Let's Meet</span></h1>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10">
+        <div class="flex flex-col items-center justify-center shadow-xl p-10 rounded-xl">
+          <span
+            class="h-40 w-40 flex items-center justify-center border-6 border-CustomWhite/70 hover:border-CustomOrange rounded-full">
+            <i class="fa-solid fa-mobile-screen-button text-CustomOrange text-6xl"></i>
+          </span>
+          <h2 class="text-2xl my-4">Give Us Call</h2>
+          <a href="">01700000000</a>
+          <a href="">01800000000</a>
+        </div>
+        <div class="flex flex-col items-center justify-center shadow-xl p-10 rounded-xl">
+          <span
+            class="h-40 w-40 flex items-center justify-center border-6 border-CustomWhite/70 hover:border-CustomOrange rounded-full">
+            <i class="fa-solid fa-location-dot text-CustomOrange text-6xl"></i></span>
+          <h2 class="text-2xl my-4">We Are On The Map</h2>
+          <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel illo ipsam tempora
+            consectetur nesciunt iusto!</p>
+        </div>
+        <div class="flex flex-col items-center justify-center shadow-xl p-10 rounded-xl">
+          <span
+            class="h-40 w-40 flex items-center justify-center border-6 border-CustomWhite/70 hover:border-CustomOrange rounded-full">
+            <i class="fa-regular fa-paper-plane text-CustomOrange text-6xl  "></i></span>
+          <h2 class="text-2xl my-4">Send Us a Message</h2>
+          <a href="">info@gmail.com</a>
+          <a href="">contact@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Map -->
+  <section>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.7512012375432!2d90.41172707238694!3d23.756250041424657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf6da9e326fc1fa7%3A0xb542e939f030cbff!2sWood%20Art%20Interiors!5e0!3m2!1sen!2sbd!4v1745746595001!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade" class="w-full aspect-[5/2]"></iframe>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="pt-10 bg-CustomBlack border-t-4 border-CustomOrange">
+    <div class="container mx-auto px-5">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10">
+
+        <div class="font-light text-CustomWhite/60 text-sm space-y-5">
+          <a href="index.html"><img src="assets/img/logo.png" alt="Logo" class="h-20" /></a>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus porro odio ea mollitia nulla commodi
+            fuga quas officia animi iure.</p>
+
+          <ul class="space-y-4">
+            <li class="border-b border-CustomWhite/60 pb-2">
+              <a href="" class="flex items-center space-x-2">
+                <i class="fa-solid fa-location-dot text-CustomOrange"></i>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quas sint non, dolor inventore
+                  voluptate!</span>
+              </a>
+            </li>
+            <li class="flex items-center space-x-2 border-b border-CustomWhite/60 pb-2">
+              <i class="fa-solid fa-phone text-CustomOrange"></i>
+              <a href=""><span>01700000000,</span></a>
+              <a href=""><span>01700000000</span></a>
+            </li>
+            <li class="flex items-center space-x-2">
+              <i class="fa-regular fa-envelope text-CustomOrange"></i>
+              <a href=""><span>info@gmail.com,</span></a>
+              <a href=""><span>contact@gmail.com</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="space-y-5 text-CustomWhite">
+          <h3 class="text-CustomWhite text-2xl">Navigation</h3>
+
+          <div class="flex">
+            <ul class="w-full md:w-1/2 space-y-4 text-xs">
+              <li>
+                <a href="about.html" class="space-x-8 hover:text-CustomOrange">
+                  <i class="fa-solid fa-caret-right text-CustomOrange"></i> <span>About Us</span>
+                </a>
+              </li>
+              <li>
+                <a href="services.html" class="space-x-8 hover:text-CustomOrange">
+                  <i class="fa-solid fa-caret-right text-CustomOrange"></i> <span>Services</span>
+                </a>
+              </li>
+              <li>
+                <a href="contact.html" class="space-x-8 hover:text-CustomOrange">
+                  <i class="fa-solid fa-caret-right text-CustomOrange"></i> <span>Contact Us</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="w-full md:w-1/2 space-y-4 text-xs">
+              <li>
+                <a href="terms_conditions.html" class="space-x-8 hover:text-CustomOrange">
+                  <i class="fa-solid fa-caret-right text-CustomOrange"></i> <span>Terms & Conditions</span>
+                </a>
+              </li>
+              <li>
+                <a href="privacy_policy.html" class="space-x-8 hover:text-CustomOrange">
+                  <i class="fa-solid fa-caret-right text-CustomOrange"></i> <span>Privacy Policy</span>
+                </a>
+              </li>
+              <li>
+                <a href="blog.html" class="space-x-8 hover:text-CustomOrange">
+                  <i class="fa-solid fa-caret-right text-CustomOrange"></i> <span>Blog</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="space-y-5">
+          <h3 class="text-CustomWhite text-2xl">Get Free Calls</h3>
+          <form action="" method="post" class="space-y-2">
+            <input type="text" placeholder="Name" class="input w-full" />
+            <input type="text" placeholder="Contact Number" class="input w-full" />
+            <textarea class="textarea w-full" placeholder="Short Message"></textarea>
+            <button type="submit" class="w-full bg-white/10 text-CustomOrange p-2 rounded">Send <i
+                class="fa-solid fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="w-full bg-black/30 text-white/60 py-4 mt-10">
+      <div class="container mx-auto px-5">
+        <p class="font-light text-center">WOOD ART INTERIORS <i class="fa-regular fa-copyright"></i> 2025 ALL RIGHTS
+          RESERVED</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Swiper JS -->
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <!-- Clients Review -->
+  <script>
+    var swiper = new Swiper('.mySwiper', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      speed: 1000, // Controls slide speed
+      fadeEffect: {
+        crossFade: true
+      },
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false
+      },
+      navigation: {
+        nextEl: '.custom-next',
+        prevEl: '.custom-prev'
+      },
+    });
+  </script>
+
+</body>
+
+</html>
