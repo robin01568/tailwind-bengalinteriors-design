@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Privacy Policy | Wood Art Interiors</title>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" /> -->
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+
+  <!-- DaisyUI (local) -->
+  <link href="assets/css/daisyui.css" rel="stylesheet" type="text/css" />
+
+  <!-- Tailwind (local) -->
+  <script src="assets/js/tailwind.js"></script>
+
+  <!-- Font Awesome 6.5.1 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+
+  <!-- Custom Tailwind CSS Configuration -->
+  <style type="text/tailwindcss">
+    @theme  {
+      --color-CustomOrange: #EF8228;
+      --color-CustomBlack: #1B1B1B;
+      --color-CustomWhite: #ffffff;
+      --font-robot: 'Roboto', sans-serif;
+      --font-cinzel: 'Cinzel', sans-serif;
+      --font-slab: 'Roboto Slab', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-base-200 font-robot">
+  <!-- Top Navbar -->
+  <nav class="bg-CustomBlack text-CustomWhite py-3">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-5">
+      <!-- Left Side -->
+      <div class="flex flex-col md:flex-row items-center space-x-3">
+        <div class="flex items-center space-x-3">
+          <div class="flex items-center border-r border-dotted border-CustomOrange pr-3">
+            <i class="fa-solid fa-phone text-CustomOrange me-5"></i><span>01700000000</span>
+          </div>
+          <div class="flex items-center border-r border-dotted border-CustomOrange pr-3">
+            <i class="fa-regular fa-envelope text-CustomOrange me-5"></i><span>info@gmail.com</span>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <i class="fa-regular fa-clock text-CustomOrange me-5"></i><span>Sat - Thu : 9:00 - 6:00</span>
+        </div>
+      </div>
+      <!-- Right Side -->
+      <div class="flex items-center space-x-5">
+        <a href="javascript:void(0)" target="_blank" class="text-md"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="javascript:void(0)" target="_blank" class="text-md"><i class="fa-brands fa-facebook"></i></a>
+        <a href="javascript:void(0)" target="_blank" class="text-md"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="javascript:void(0)" target="_blank" class="text-md"><i class="fa-brands fa-pinterest"></i></a>
+        <a href="javascript:void(0)" target="_blank" class="text-md"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </nav>
+  <!-- Header -->
+  <div class="sticky top-0 left-0 bg-base-100 shadow-sm">
+    <div class="flex items-center container mx-auto py-2 px-5">
+      <!-- Logo -->
+      <div class="flex-1">
+        <a href="index.html"><img src="assets/img/logo.png" alt="Logo" class="h-12" /></a>
+      </div>
+      <!-- Nav Items -->
+      <div class="hidden lg:flex flex-1">
+        <ul class="flex items-center space-x-10 px-1">
+          <li class="font-bold text-sm hover:text-CustomOrange">
+            <a href="index.html">HOME</a>
+          </li>
+          <li class="font-bold text-sm hover:text-CustomOrange">
+            <a href="about.html">ABOUT US</a>
+          </li>
+          <li class="relative group text-sm">
+            <a href="services.html" class="font-bold text-sm hover:text-CustomOrange flex">SERVICES <i
+                class="fa-solid fa-sort-down ms-2"></i></a>
+            <!-- First level dropdown -->
+            <ul class="absolute left-0 top-full hidden group-hover:block bg-CustomWhite p-4 space-y-3 shadow-lg z-10">
+              <li class="border-b border-dashed hover:text-CustomOrange whitespace-nowrap"><a
+                  href="service_details.html">RESIDENTIAL</a></li>
+
+              <li class="relative border-b border-dashed group/sub">
+                <div class="flex items-center space-x-2 hover:text-CustomOrange whitespace-nowrap"><a
+                    href="service_details.html">COMMERCIAL INTERIOR</a><i class="fa-solid fa-caret-right"></i>
+                </div>
+                <!-- Submenu (second level) -->
+                <ul
+                  class="absolute left-full top-0 hidden group-hover/sub:block bg-CustomWhite p-4 space-y-3 shadow-lg z-20">
+                  <li class="border-b border-dashed hover:text-CustomOrange whitespace-nowrap"><a
+                      href="service_details.html">BEDROOM
+                      DESIGN</a></li>
+                  <li class="border-b border-dashed hover:text-CustomOrange whitespace-nowrap"><a
+                      href="service_details.html">BATHROOM
+                      DESIGN</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </li>
+          <li class="font-bold text-sm hover:text-CustomOrange">
+            <a href="portfolio.html">PORTFOLIO</a>
+          </li>
+          <li class="font-bold text-sm hover:text-CustomOrange">
+            <a href="contact.html">CONTACT US</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Drawer -->
+      <div class="block lg:hidden">
+        <div class="drawer">
+          <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+          <div class="drawer-content">
+            <!-- Page content here -->
+            <label for="my-drawer" class="text-CustomOrange text-2xl bg-transparent btn drawer-button border-none"><i
+                class="fa-solid fa-bars-staggered"></i></label>
+          </div>
+          <div class="drawer-side">
+            <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+            <div class="bg-CustomWhite text-base-content min-h-full w-80 p-4">
+              <!-- Logo -->
+              <div class="mb-5 border-b border-dashed border-CustomOrange">
+                <a href="index.html"><img src="assets/img/logo.png" alt="Logo" class="h-12" /></a>
+              </div>
+              <ul class="space-y-5">
+                <li class="font-bold text-sm hover:text-CustomOrange">
+                  <a href="index.html">HOME</a>
+                </li>
+                <li class="font-bold text-sm hover:text-CustomOrange">
+                  <a href="about.html">ABOUT US</a>
+                </li>
+                <li class="relative group text-sm">
+                  <a href="services.html" class="font-bold text-sm hover:text-CustomOrange">SERVICES
+                    <i class="fa-solid fa-sort-down"></i></a>
+                  <!-- First level dropdown -->
+                  <ul class="hidden group-hover:block bg-CustomWhite p-4 space-y-3 shadow-lg">
+                    <li class="border-b border-dashed hover:text-CustomOrange whitespace-nowrap"><a
+                        href="service_details.html">RESIDENTIAL</a></li>
+
+                    <li class="relative border-b border-dashed group/sub">
+                      <div class="flex items-center space-x-2 hover:text-CustomOrange whitespace-nowrap">
+                        <a href="service_details.html">COMMERCIAL INTERIOR</a><i class="fa-solid fa-caret-right"></i>
+                      </div>
+                      <!-- Submenu (second level) -->
+                      <ul class="hidden group-hover/sub:block bg-CustomWhite p-4 space-y-3 shadow-lg">
+                        <li class="border-b border-dashed hover:text-CustomOrange whitespace-nowrap">
+                          <a href="service_details.html">BEDROOM DESIGN</a>
+                        </li>
+                        <li class="border-b border-dashed hover:text-CustomOrange whitespace-nowrap">
+                          <a href="service_details.html">BATHROOM DESIGN</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                  </ul>
+                </li>
+                <li class="font-bold text-sm hover:text-CustomOrange">
+                  <a href="portfolio.html">PORTFOLIO</a>
+                </li>
+                <li class="font-bold text-sm hover:text-CustomOrange">
+                  <a href="contact.html">CONTACT US</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="bg-[url('assets/img/1.webp')] w-full aspect-[4/1] flex items-center justify-center">
+    <div class="w-full md:w-2/3 text-center text-CustomWhite px-5">
+      <h1 class="font-cinzel font-bold text-md md:text-3xl mb-5 md:mb-0">OUR PRIVACY POLICY</h1>
+    </div>
+  </section>
+
+  <!-- Latest News -->
+  <section class="bg-CustomWhite">
+    <div class="container mx-auto py-20 px-5">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam deserunt ullam eum voluptatibus dicta ipsa ea ducimus, neque corporis! Repudiandae cum laborum, iusto aperiam rerum maxime repellat ea accusamus molestias possimus vitae, quod quis qui officiis, sequi aliquid totam ex dignissimos dicta illo in quasi. Aut eveniet saepe aperiam, neque quo numquam dolorum sequi. Libero omnis voluptates magni, quibusdam porro delectus itaque, laudantium aliquam eaque dolorem esse commodi perspiciatis quo. Doloremque possimus cupiditate obcaecati <br> modi vero recusandae alias quos, nostrum praesentium facere a veritatis unde porro aliquam vel! Consequatur ducimus inventore nihil sapiente quaerat veniam pariatur numquam dolores nesciunt excepturi praesentium dolorem provident, iste earum tempora quod voluptate accusamus. Quo praesentium quibusdam quos impedit illo eaque, cumque sapiente odit. Alias expedita maxime esse adipisci ipsa ea optio ducimus velit inventore placeat saepe, sint, assumenda dolorum doloremque blanditiis nihil minus in facilis ab animi quam commodi voluptas. Nobis rem voluptates aut dignissimos fugit beatae natus deleniti saepe quae illum, vel cumque assumenda iste distinctio numquam quos esse, eius culpa? Quaerat minus, facere dicta quam porro similique quasi accusantium quod! Possimus nobis minima veniam recusandae laboriosam, a saepe, doloribus velit commodi eos reiciendis odio provident, nemo sunt. Enim expedita veniam placeat repudiandae quasi officiis saepe sunt, rem incidunt dolore dolorem tempore voluptas nihil maiores facilis molestiae inventore laborum omnis nam laboriosam animi adipisci voluptatibus est. Hic quo ipsam vero eveniet nobis nisi eius veniam nostrum, dicta rerum eligendi perferendis, molestiae, magni assumenda <br><br> labore placeat officiis consequatur dolorem? Eum enim ipsum vitae impedit nesciunt atque ex iusto quis dolores deserunt natus quae ratione illo facere culpa, unde corrupti eveniet. Animi ab nesciunt delectus iure provident architecto debitis, repudiandae et dignissimos inventore tenetur eaque adipisci incidunt sequi totam suscipit quas laborum ex enim consectetur iste vero! Optio, fugiat? Esse dolores dolorum repellendus, quidem laudantium iure voluptatem sapiente molestiae. Repellendus impedit voluptatem error vitae saepe, ex dolore modi, incidunt pariatur inventore voluptatibus. Magni assumenda itaque cum odit iure iste quisquam illo, ex accusamus ratione beatae labore atque pariatur repellat natus quam temporibus quas magnam blanditiis culpa. Excepturi ad tempore, id esse pariatur ea aspernatur enim ipsum suscipit repellat saepe, autem sit! Recusandae, cumque! Aut iste neque incidunt dicta, vitae odio soluta tenetur animi vel vero eius tempore libero necessitatibus fuga illo a ullam illum ad perferendis consequuntur laboriosam sequi temporibus. Et quaerat ipsam, dolor temporibus harum non nostrum iure ducimus hic provident dicta laboriosam? Repellat labore facilis quae asperiores. Cupiditate, voluptates. Dicta corporis nobis deserunt laborum soluta culpa magni tenetur? Obcaecati eum adipisci ullam assumenda nisi delectus doloremque nobis mollitia quibusdam eius placeat maxime officiis pariatur error, optio rem impedit? Ipsa, nihil maiores? Dignissimos, provident facere. Tempora nostrum, quisquam explicabo laborum veritatis eligendi cumque aliquid! Quod in quo distinctio dignissimos, quasi voluptas ducimus sapiente nostrum impedit maxime nulla ipsam omnis eligendi doloremque, totam asperiores molestiae mollitia harum ut? Accusantium perferendis soluta assumenda officia aut commodi culpa optio cupiditate reiciendis iusto quibusdam voluptatem sequi praesentium quod doloribus sed libero dignissimos, nostrum vel vero, cumque in porro? Labore veritatis sunt, fugit optio vel eius impedit quis maiores reiciendis tenetur sint laboriosam beatae doloribus numquam eaque velit corporis quisquam suscipit voluptatibus dicta quae blanditiis soluta quam nulla. Eos fuga perspiciatis dolore facere, quos distinctio aliquid minima pariatur debitis quod dolores eius similique, ratione sunt odio ipsam minus saepe. Esse cum in animi quibusdam atque deleniti pariatur, optio, laborum dolores aut dignissimos ex quam sequi ab tenetur itaque at aperiam voluptates adipisci, quae incidunt voluptate quis. Expedita dolore aut recusandae atque tempore quaerat odio facere voluptates id provident. Sit fuga minus exercitationem! Nam mollitia excepturi molestias accusantium possimus optio quasi quis deleniti, fuga molestiae odit maxime veniam laudantium perspiciatis quae saepe repellat praesentium aliquid fugit cupiditate? Reprehenderit et aliquid unde incidunt, illum, sed cupiditate accusamus, in sit officia corporis quos ea aut! Quos obcaecati <br> explicabo, necessitatibus quia sit porro debitis quibusdam, voluptatibus illum, laudantium nobis fugiat? Quos sed, rem, hic nesciunt dicta necessitatibus aperiam tempora quae possimus nemo omnis vel labore in eaque sunt veritatis? Nisi voluptas esse voluptates impedit dolores deleniti natus facilis sequi debitis provident aperiam numquam voluptatum est placeat error, beatae iure repudiandae neque cupiditate ipsam ea architecto aut? Et sed optio magnam aperiam doloribus tenetur, error distinctio eveniet consectetur vel nihil, repudiandae voluptates laboriosam accusantium nemo inventore. Fugiat harum eum nostrum earum numquam necessitatibus id impedit quo, odit alias cumque quaerat! Possimus praesentium commodi iste atque perspiciatis? Vero laboriosam qui deleniti vitae quaerat obcaecati voluptas nisi, labore velit dicta natus nam quisquam. Quod consequatur odit necessitatibus libero nostrum nulla eius. Porro beatae tempore rerum nihil maxime eaque, assumenda accusamus. Doloribus, repudiandae illum debitis, ab repellendus earum voluptas nisi tenetur sapiente officiis iusto? Cupiditate molestiae <br> magni autem esse possimus eius earum, similique voluptate rerum quasi culpa provident nobis saepe nostrum nesciunt voluptatibus ad eum vero quam aspernatur fuga iure, voluptas unde adipisci. Inventore laborum omnis dolore sit voluptates neque corporis eos molestias modi eius, ex qui incidunt repudiandae dicta, sequi iure veniam dolorem at est tempora perspiciatis explicabo dolores reiciendis? Inventore, officia? Accusantium, quisquam! Labore doloremque in quasi eos similique sunt magni, nesciunt corporis voluptatum temporibus incidunt cupiditate! Deleniti, quis? Sed nihil ullam repudiandae aliquid veritatis officiis. <br> Perferendis, accusantium blanditiis architecto quo sit, commodi nesciunt sed eum impedit, quae ratione rerum? Excepturi quia saepe eligendi distinctio cumque, repellendus repellat corporis eaque repudiandae id ducimus cupiditate eum modi nobis similique. Dolorum, nemo fugit, inventore voluptas soluta optio asperiores similique vitae quibusdam vero modi ullam beatae autem sunt dolorem cum aspernatur. Hic accusamus rerum odio? Quae quisquam recusandae excepturi eius quia, velit reiciendis accusamus! Cumque <br> quasi aliquid ipsa, et labore, excepturi eum unde deleniti laborum inventore neque. Molestias, iste nisi nobis nostrum animi harum at, saepe modi dignissimos quis natus dolores consequuntur fugiat beatae maiores! Amet labore ipsam, facilis impedit voluptatum delectus distinctio, dignissimos voluptate eaque consequuntur nihil perspiciatis quas voluptas et reprehenderit? Harum quam officiis vel numquam. Explicabo accusantium, vitae eveniet ea ut ducimus impedit eos ab, cumque aliquam, eum quisquam? Amet pariatur a laudantium magnam rem.</p>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="pt-10 bg-CustomBlack border-t-4 border-CustomOrange">
+    <div class="container mx-auto px-5">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10">
+
+        <div class="font-light text-CustomWhite/60 text-sm space-y-5">
+          <a href="index.html"><img src="assets/img/logo.png" alt="Logo" class="h-20" /></a>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus porro odio ea mollitia nulla commodi
+            fuga quas officia animi iure.</p>
+
+          <ul class="space-y-4">
+            <li class="border-b border-CustomWhite/60 pb-2">
+              <a href="" class="flex items-center space-x-2">
+                <i class="fa-solid fa-location-dot text-CustomOrange"></i>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum quas sint non, dolor inventore
+                  voluptate!</span>
+              </a>
+            </li>
+            <li class="flex items-center space-x-2 border-b border-CustomWhite/60 pb-2">
+              <i class="fa-solid fa-phone text-CustomOrange"></i>
+              <a href=""><span>01700000000,</span></a>
+              <a href=""><span>01700000000</span></a>
+            </li>
+            <li class="flex items-center space-x-2">
+              <i class="fa-regular fa-envelope text-CustomOrange"></i>
+              <a href=""><span>info@gmail.com,</span></a>
+              <a href=""><span>contact@gmail.com</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="space-y-5 text-CustomWhite">
+          <h3 class="text-CustomWhite text-2xl">Navigation</h3>
+
+          <div class="flex">
+            <ul class="w-full md:w-1/2 space-y-4 text-xs">
+              <li>
+                <a href="about.html" class="space-x-8 hover:text-CustomOrange">
+                  <i class="fa-solid fa-caret-right text-CustomOrange"></i> <span>About Us</span>
+                </a>
+              </li>
+              <li>
+                <a href="services.html" class="space-x-8 hover:text-CustomOrange">
+                  <i class="fa-solid fa-caret-right text-CustomOrange"></i> <span>Services</span>
+                </a>
+              </li>
+              <li>
+                <a href="contact.html" class="space-x-8 hover:text-CustomOrange">
+                  <i class="fa-solid fa-caret-right text-CustomOrange"></i> <span>Contact Us</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="w-full md:w-1/2 space-y-4 text-xs">
+              <li>
+                <a href="terms_conditions.html" class="space-x-8 hover:text-CustomOrange">
+                  <i class="fa-solid fa-caret-right text-CustomOrange"></i> <span>Terms & Conditions</span>
+                </a>
+              </li>
+              <li>
+                <a href="privacy_policy.html" class="space-x-8 text-CustomOrange hover:text-CustomOrange">
+                  <i class="fa-solid fa-caret-right text-CustomOrange"></i> <span>Privacy Policy</span>
+                </a>
+              </li>
+              <li>
+                <a href="blog.html" class="space-x-8 hover:text-CustomOrange">
+                  <i class="fa-solid fa-caret-right text-CustomOrange"></i> <span>Blog</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="space-y-5">
+          <h3 class="text-CustomWhite text-2xl">Get Free Calls</h3>
+          <form action="" method="post" class="space-y-2">
+            <input type="text" placeholder="Name" class="input w-full" />
+            <input type="text" placeholder="Contact Number" class="input w-full" />
+            <textarea class="textarea w-full" placeholder="Short Message"></textarea>
+            <button type="submit" class="w-full bg-white/10 text-CustomOrange p-2 rounded">Send <i
+                class="fa-solid fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="w-full bg-black/30 text-white/60 py-4 mt-10">
+      <div class="container mx-auto px-5">
+        <p class="font-light text-center">WOOD ART INTERIORS <i class="fa-regular fa-copyright"></i> 2025 ALL RIGHTS
+          RESERVED</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Swiper JS -->
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <!-- Clients Review -->
+  <script>
+    var swiper = new Swiper('.mySwiper', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      speed: 1000, // Controls slide speed
+      fadeEffect: {
+        crossFade: true
+      },
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false
+      },
+      navigation: {
+        nextEl: '.custom-next',
+        prevEl: '.custom-prev'
+      },
+    });
+  </script>
+
+</body>
+
+</html>
