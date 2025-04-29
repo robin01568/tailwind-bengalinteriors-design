@@ -194,48 +194,134 @@
   <!-- Portfolio Images Section -->
   <section class="p-10">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-      <figure>
+      <figure onclick="openModal(0)">
         <img src="assets/img/1.webp" alt="Portfolio Images" class="w-full h-auto object-cover">
       </figure>
-      <figure>
+      <figure onclick="openModal(1)">
         <img src="assets/img/2.webp" alt="Portfolio Images" class="w-full h-auto object-cover">
       </figure>
-      <figure>
+      <figure onclick="openModal(2)">
         <img src="assets/img/1.webp" alt="Portfolio Images" class="w-full h-auto object-cover">
       </figure>
-      <figure>
+      <figure onclick="openModal(3)">
         <img src="assets/img/2.webp" alt="Portfolio Images" class="w-full h-auto object-cover">
-      </figure>
-      <figure>
-        <img src="assets/img/1.webp" alt="Portfolio Images" class="w-full h-auto object-cover">
-      </figure>
-      <figure>
-        <img src="assets/img/2.webp" alt="Portfolio Images" class="w-full h-auto object-cover">
-      </figure>
-      <figure>
-        <img src="assets/img/1.webp" alt="Portfolio Images" class="w-full h-auto object-cover">
-      </figure>
-      <figure>
-        <img src="assets/img/2.webp" alt="Portfolio Images" class="w-full h-auto object-cover">
-      </figure>
-      <figure>
-        <img src="assets/img/1.webp" alt="Portfolio Images" class="w-full h-auto object-cover">
-      </figure>
-      <figure>
-        <img src="assets/img/2.webp" alt="Portfolio Images" class="w-full h-auto object-cover">
-      </figure>
-      <figure>
-        <img src="assets/img/1.webp" alt="Portfolio Images" class="w-full h-auto object-cover">
-      </figure>
-      <figure>
-        <img src="assets/img/2.webp" alt="Portfolio Images" class="w-full h-auto object-cover">
-      </figure>
+      </figure>      
     </div>
   </section>
 
+  <!-- myPortfolioImagesSwiper styles -->
+  <style>
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
 
-  
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .swiper-slide {
+      background-size: cover;
+      background-position: center;
+    }
+
+    .myPortfolioImagesSwiper2 {
+      height: 80%;
+      width: 100%;
+    }
+
+    .myPortfolioImagesSwiper {
+      height: 20%;
+      box-sizing: border-box;
+      padding: 10px 0;
+    }
+
+    .myPortfolioImagesSwiper .swiper-slide {
+      width: 25%;
+      height: 100%;
+      opacity: 0.4;
+    }
+
+    .myPortfolioImagesSwiper .swiper-slide-thumb-active {
+      opacity: 1;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+
+  <!-- myPortfolioImagesSwiper modal -->
+  <dialog id="my_modal_3" class="modal">
+    <div class="modal-box max-w-full">
+      <form method="dialog">
+        <button class="btn btn-sm btn-circle btn-ghost absolute right-1 top-1">✕</button>
+      </form>
+      <!-- Swiper -->
+      <div class="h-[90vh]">
+        <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper myPortfolioImagesSwiper2">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <img src="assets/img/1.webp" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/2.webp" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/1.webp" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/2.webp" />
+            </div>
+
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <div thumbsSlider="" class="swiper myPortfolioImagesSwiper">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <img src="assets/img/1.webp" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/2.webp" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/1.webp" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/2.webp" />
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
 
 
   <!-- Footer Section -->
@@ -340,6 +426,51 @@
       },
     });
   </script>
+
+
+  <!-- myPortfolioImagesSwiper Js -->
+  <script>
+    window.onload = function () {
+      let swiper, swiper2;
+  
+      window.openModal = function(index) {
+        my_modal_3.showModal();
+        setTimeout(() => {
+          swiper2.slideToLoop(index, 0);
+        }, 100);
+      };
+  
+      swiper = new Swiper(".myPortfolioImagesSwiper", {
+        loop: true,
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+  
+      swiper2 = new Swiper(".myPortfolioImagesSwiper2", {
+        loop: true,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+          swiper: swiper,
+        },
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false
+        },
+      });
+    };
+  </script>
+  
+  
+
+
+
+
 
   <!-- Image Gallery Swiper -->
   <!-- <style>
